@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#343537","on-background":"#e3e2e5","on-secondary":"#00344d","on-secondary-container":"#00344e","outline-variant":"#554336","tertiary-fixed":"#6ffbbe","error":"#ffb4ab","tertiary-container":"#00a572","on-error-container":"#ffdad6","on-error":"#690005","on-secondary-fixed-variant":"#004c6e","surface-bright":"#38393b","on-tertiary-fixed":"#002113","surface-container-low":"#1b1c1e","error-container":"#93000a","on-tertiary":"#003824","on-surface-variant":"#dbc2b0","surface-container-high":"#292a2c","primary":"#ffb77d","inverse-surface":"#e3e2e5","tertiary-fixed-dim":"#4edea3","background":"#121315","surface-tint":"#ffb77d","on-surface":"#e3e2e5","secondary":"#89ceff","primary-container":"#d97707","surface-dim":"#121315","surface":"#121315","surface-container-lowest":"#0d0e10","on-primary-fixed-variant":"#6e3900","on-tertiary-container":"#00311f","on-tertiary-fixed-variant":"#005236","on-primary-fixed":"#2f1500","inverse-primary":"#904d00","secondary-container":"#00a2e6","on-primary-container":"#432100","tertiary":"#4edea3","secondary-fixed-dim":"#89ceff","primary-fixed":"#ffdcc3","on-secondary-fixed":"#001e2f","surface-container":"#1f2022","primary-fixed-dim":"#ffb77d","surface-variant":"#343537","outline":"#a38c7c","secondary-fixed":"#c9e6ff","on-primary":"#4d2600"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"unit-md":"12px","unit-3xl":"48px","unit-sm":"8px","unit-lg":"20px","unit-2xs":"2px","unit-xl":"24px","unit-2xl":"32px","gutter-compact":"12px","gutter-spacious":"24px","unit-xs":"4px","unit-base":"16px","gutter-default":"16px"},fontFamily:{"metric-md":["JetBrains Mono"],"body-md":["Geist"],"body-lg":["Geist"],"display-lg":["Geist"],caption:["Geist"],"metric-sm":["JetBrains Mono"],"headline-sm":["Geist"],"headline-md":["Geist"],"label-mono":["JetBrains Mono"],"display-xl":["Geist"],"metric-xl":["JetBrains Mono"],"body-sm":["Geist"],"display-lg-mobile":["Geist"]},fontSize:{"metric-md":["20px",{lineHeight:"26px",letterSpacing:"-0.02em",fontWeight:"500"}],"body-md":["13px",{lineHeight:"20px",letterSpacing:"-0.005em",fontWeight:"400"}],"body-lg":["15px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"400"}],"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.025em",fontWeight:"600"}],caption:["11px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"400"}],"metric-sm":["14px",{lineHeight:"18px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-sm":["18px",{lineHeight:"26px",letterSpacing:"-0.015em",fontWeight:"500"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"500"}],"label-mono":["11px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"500"}],"display-xl":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"600"}],"metric-xl":["32px",{lineHeight:"38px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"display-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between select-none shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-unit-base pt-unit-base pb-unit-md flex items-center justify-between gap-unit-sm"><div class="flex items-center gap-unit-sm min-w-0"><img alt="Strata Customer Intelligence Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1U7_5u7jai-nnFVYhGUXwryFi3D5ZRMFMDxHLFsjWIepyUlBpqTUaCbyx3qYpxZGDRzbrnrWtuoQ1DNswQLpu-PEpJRJRlevSNQPD8zBEi5RhM_EXkEv3xr7EcSWPCZ3DFK_o0Z4eCxpeTKWuKUjv_yljZ_-ZsVTf-lHHk2etByqODuVzokyc-PwHN2z8nq-uXUTqZgrpuA-L57me5-ZIRxXOEcwaL3YVbmevwTI-BX5IHZfh_QIESZddY"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate leading-none">Strata</span><span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-widest truncate">Intelligence</span></div></div><div class="flex items-center gap-1.5 px-unit-xs py-0.5 rounded bg-surface-container-high"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-mono text-caption text-tertiary uppercase">Live</span></div></div><div class="px-unit-base pb-unit-base"><div class="w-full flex items-center justify-between px-unit-sm py-unit-xs rounded bg-surface-container-low text-on-surface-variant cursor-pointer hover:bg-surface-container hover:text-on-surface transition-colors"><div class="flex flex-col min-w-0"><span class="font-label-mono text-caption text-on-surface-variant uppercase">Workspace</span><span class="font-body-sm text-body-sm text-on-surface truncate font-medium">Acme Enterprise (Production)</span></div><span class="material-symbols-outlined text-sm flex-shrink-0 ml-1">unfold_more</span></div></div><div class="px-unit-base space-y-unit-lg overflow-y-auto"><div class="space-y-1"><div class="px-unit-sm font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Workspaces / Intelligence</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded"><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-lg leading-none">space_dashboard</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="churn-intelligence" href="#"><span class="material-symbols-outlined text-lg leading-none">warning</span><span class="font-body-md text-body-md">Churn Intelligence</span></a><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="customer-value" href="#"><span class="material-symbols-outlined text-lg leading-none">trending_up</span><span class="font-body-md text-body-md">Customer Value</span></a><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="customer-segments" href="#"><span class="material-symbols-outlined text-lg leading-none">pie_chart</span><span class="font-body-md text-body-md">Customer Segments</span></a><a aria-current="page" class="flex items-center gap-unit-sm px-unit-sm py-1.5 transition-colors bg-primary-container text-on-primary-container font-medium rounded" data-path="retention-priorities" href="#"><span class="material-symbols-outlined text-lg leading-none">bolt</span><span class="font-body-md text-body-md">Retention Priorities</span></a></nav></div><div class="space-y-1"><div class="px-unit-sm font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Exploration</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded"><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="customer-explorer" href="#"><span class="material-symbols-outlined text-lg leading-none">table_chart</span><span class="font-body-md text-body-md">Customer Explorer</span></a><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="cohort-matrix" href="#"><span class="material-symbols-outlined text-lg leading-none">grid_view</span><span class="font-body-md text-body-md">Cohort Matrix</span></a></nav></div><div class="space-y-1"><div class="px-unit-sm font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Management</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded"><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="predictive-models" href="#"><span class="material-symbols-outlined text-lg leading-none">memory</span><span class="font-body-md text-body-md">Predictive Models</span></a><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="automated-triggers" href="#"><span class="material-symbols-outlined text-lg leading-none">tune</span><span class="font-body-md text-body-md">Automated Triggers</span></a></nav></div></div></div><div class="p-unit-base flex flex-col gap-unit-sm bg-surface-container-lowest"><div class="flex items-center justify-between px-unit-sm py-unit-xs rounded bg-surface-container-low"><div class="flex items-center gap-2 min-w-0"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-mono text-caption text-on-surface-variant truncate">Model v4.2 • Updated 8m ago</span></div><span class="font-label-mono text-caption text-tertiary">OK</span></div><div class="flex items-center justify-between pt-unit-xs"><div class="flex items-center gap-unit-sm min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw0FVLRN3MV2ghhNW1d-evuy9rhFLksWZYY5syXzCU_95_AMS0e6ExXozSY81KEP0iaCnr1G5aYc0Ej25E5DmGtsf-XE6wUAGasIoTyA1fvPEKZMZxotm3FiPN3tQxe5T9A2cRuthP2AIW-CldcUBHGvI2JX_dFixOLtQ7dCqeMqvp5ey_yOBRN0zf95HGnApB4-iiGanzLA_lpE0x5dx4Tf0EagfOZcmlpsSlRzclfrYKJITOf-gG"/><div class="flex flex-col min-w-0"><span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Elena Vance</span><span class="font-caption text-caption text-on-surface-variant truncate">VP Customer Success</span></div></div><button aria-label="Settings" class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-lg leading-none">settings</span></button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-unit-xl"><div class="flex items-center gap-unit-base"><div class="flex items-center gap-2 font-label-mono text-caption text-on-surface-variant"><span class="text-on-surface-variant">Strata</span><span class="text-surface-container-highest">/</span><span class="text-on-surface-variant">Customer Intelligence</span><span class="text-surface-container-highest">/</span><span class="text-primary font-medium">Overview</span></div><div class="hidden xl:flex items-center gap-unit-xs"><div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-caption text-on-surface-variant font-label-mono"><span class="text-on-surface-variant/70">Period:</span><span class="text-on-surface">Last 30 Days (Trailing)</span><span class="material-symbols-outlined text-xs leading-none">arrow_drop_down</span></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-caption text-on-surface-variant font-label-mono"><span class="text-on-surface-variant/70">Compare:</span><span class="text-on-surface">Q3 Prior</span></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-caption text-on-surface font-label-mono"><span class="text-on-surface-variant/70">Segment:</span><span>Enterprise + Mid-Market</span></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-caption text-on-surface font-label-mono"><span class="text-on-surface-variant/70">Health:</span><span>All</span></div></div></div><div class="flex items-center gap-unit-md"><div class="hidden md:flex items-center gap-2 bg-surface-container-low px-unit-md py-1.5 rounded cursor-pointer text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-base leading-none">search</span><span class="font-body-sm text-body-sm">⌘K to query cohorts or drivers...</span><span class="font-label-mono text-caption px-1 rounded bg-surface-container-high text-on-surface-variant">⌘K</span></div><div class="flex items-center gap-unit-sm"><button class="h-9 px-3.5 rounded bg-surface-container text-on-surface font-body-sm hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center gap-1.5"><span class="material-symbols-outlined text-base leading-none">file_download</span><span>Export Dossier</span></button><button class="h-9 px-3.5 rounded bg-primary-container text-on-primary-container font-body-sm font-medium hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1.5"><span class="material-symbols-outlined text-base leading-none">add_circle</span><span>New Query</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover ml-2 ring-1 ring-surface-container-highest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw0FVLRN3MV2ghhNW1d-evuy9rhFLksWZYY5syXzCU_95_AMS0e6ExXozSY81KEP0iaCnr1G5aYc0Ej25E5DmGtsf-XE6wUAGasIoTyA1fvPEKZMZxotm3FiPN3tQxe5T9A2cRuthP2AIW-CldcUBHGvI2JX_dFixOLtQ7dCqeMqvp5ey_yOBRN0zf95HGnApB4-iiGanzLA_lpE0x5dx4Tf0EagfOZcmlpsSlRzclfrYKJITOf-gG"/></div></div></header><main class="relative w-full pt-16 bg-surface min-h-screen px-unit-xl py-unit-base"><div class="flex flex-col w-full pb-unit-3xl space-y-unit-xl">
+<!-- Top Telemetry Ribbon & Formula Anchor -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-unit-md pt-unit-xs">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-label-mono text-caption text-primary uppercase tracking-widest">Decision Surface // Priority Rank</span>
+<span class="text-surface-container-highest">•</span>
+<span class="font-label-mono text-caption text-on-surface-variant">Model Confidence: 94.6%</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Retention Priorities & Intervention Queue</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Algorithmic triage prioritizing enterprise salvage value: 
+        <span class="font-label-mono text-caption text-on-surface bg-surface-container-low px-1.5 py-0.5 rounded">
+          Priority Score = (ARR × Churn Risk × Recoverability Index)
+        </span>. Focus interventions where operational leverage generates maximum retained revenue.
+      </p>
+</div>
+<!-- Quick Telemetry Badge -->
+<div class="flex items-center gap-unit-base bg-surface-container-low p-unit-sm px-unit-md rounded">
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Immediate Actionable ARR</span>
+<span class="font-metric-md text-metric-md text-primary">$6,420,000</span>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Critical Window</span>
+<span class="font-metric-md text-metric-md text-on-surface">< 90 Days</span>
+</div>
+</div>
+</div>
+<!-- Prioritization Macro Matrix (Quadrant Overview) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-unit-md">
+<!-- Tile 1: High ARR / High Recoverability -->
+<div class="bg-surface-container-low p-unit-base rounded flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-colors cursor-pointer shadow-sm">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-mono text-caption text-primary font-medium tracking-wider uppercase">Act Today</span>
+</div>
+<span class="font-label-mono text-caption text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded">Q-1 Anchor</span>
+</div>
+<div class="my-unit-md">
+<div class="font-headline-sm text-headline-sm text-on-surface">High ARR • High Recoverability</div>
+<div class="font-metric-xl text-metric-xl text-on-surface tracking-tight mt-1">$3,400,000</div>
+</div>
+<div class="flex items-center justify-between font-label-mono text-caption text-on-surface-variant pt-unit-xs">
+<span>12 accounts queued</span>
+<span class="text-tertiary">78% Win Probability</span>
+</div>
+</div>
+<!-- Tile 2: High ARR / Complex Remediation -->
+<div class="bg-surface-container-low p-unit-base rounded flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-colors cursor-pointer shadow-sm">
+<div class="absolute top-0 left-0 w-1 h-full bg-error"></div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-label-mono text-caption text-error font-medium tracking-wider uppercase">Exec Escalation</span>
+</div>
+<span class="font-label-mono text-caption text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded">Q-2 High Drag</span>
+</div>
+<div class="my-unit-md">
+<div class="font-headline-sm text-headline-sm text-on-surface">High ARR • Complex Remediation</div>
+<div class="font-metric-xl text-metric-xl text-on-surface tracking-tight mt-1">$1,900,000</div>
+</div>
+<div class="flex items-center justify-between font-label-mono text-caption text-on-surface-variant pt-unit-xs">
+<span>6 accounts queued</span>
+<span class="text-on-surface-variant">42% Win Probability</span>
+</div>
+</div>
+<!-- Tile 3: Fast Remediation / Moderate ARR -->
+<div class="bg-surface-container-low p-unit-base rounded flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-colors cursor-pointer shadow-sm">
+<div class="absolute top-0 left-0 w-1 h-full bg-tertiary"></div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-mono text-caption text-tertiary font-medium tracking-wider uppercase">Quick Wins</span>
+</div>
+<span class="font-label-mono text-caption text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded">Q-3 High Yield</span>
+</div>
+<div class="my-unit-md">
+<div class="font-headline-sm text-headline-sm text-on-surface">Fast Remediation • Mod. ARR</div>
+<div class="font-metric-xl text-metric-xl text-on-surface tracking-tight mt-1">$940,000</div>
+</div>
+<div class="flex items-center justify-between font-label-mono text-caption text-on-surface-variant pt-unit-xs">
+<span>16 accounts queued</span>
+<span class="text-tertiary">91% Win Probability</span>
+</div>
+</div>
+<!-- Tile 4: Passive Churn / Low ROI -->
+<div class="bg-surface-container-low p-unit-base rounded flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-colors cursor-pointer shadow-sm">
+<div class="absolute top-0 left-0 w-1 h-full bg-surface-container-highest"></div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+<span class="font-label-mono text-caption text-on-surface-variant font-medium tracking-wider uppercase">Low ROI Auto-Nurture</span>
+</div>
+<span class="font-label-mono text-caption text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded">Q-4 Passive</span>
+</div>
+<div class="my-unit-md">
+<div class="font-headline-sm text-headline-sm text-on-surface">Passive Churn • Low Touch</div>
+<div class="font-metric-xl text-metric-xl text-on-surface-variant tracking-tight mt-1">$180,000</div>
+</div>
+<div class="flex items-center justify-between font-label-mono text-caption text-on-surface-variant pt-unit-xs">
+<span>4 accounts queued</span>
+<span class="text-on-surface-variant">18% Win Probability</span>
+</div>
+</div>
+</div>
+<!-- Filters & Triage Control Bar -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-unit-md bg-surface-container-lowest p-unit-sm rounded shadow-sm">
+<div class="flex flex-wrap items-center gap-1.5">
+<button class="h-8 px-3 rounded bg-primary-container text-on-primary-container font-body-sm font-medium transition-colors flex items-center gap-1.5">
+<span>All Open Triage</span>
+<span class="px-1.5 py-0.2 rounded bg-on-primary-container/20 font-label-mono text-caption">38</span>
+</button>
+<button class="h-8 px-3 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-body-sm transition-colors flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>Needs Exec Contact</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high font-label-mono text-caption text-on-surface">12</span>
+</button>
+<button class="h-8 px-3 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-body-sm transition-colors flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Technical Intervention</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high font-label-mono text-caption text-on-surface">14</span>
+</button>
+<button class="h-8 px-3 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-body-sm transition-colors flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Commercial Review</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high font-label-mono text-caption text-on-surface">12</span>
+</button>
+</div>
+<div class="flex flex-wrap items-center gap-unit-sm">
+<div class="flex items-center gap-1.5 px-unit-sm py-1 rounded bg-surface-container text-body-sm text-on-surface-variant">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Owner:</span>
+<select class="bg-transparent text-on-surface text-body-sm font-body-sm focus:outline-none cursor-pointer">
+<option value="all">All CSMs & Directors</option>
+<option value="elena">Elena Vance (VP)</option>
+<option value="marcus">Marcus Thorne (Principal)</option>
+<option value="sarah">Sarah Jenkins (Enterprise)</option>
+</select>
+</div>
+<div class="flex items-center gap-1.5 px-unit-sm py-1 rounded bg-surface-container text-body-sm text-on-surface-variant">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Sort:</span>
+<span class="text-on-surface font-medium">Priority Impact Score (High to Low)</span>
+<span class="material-symbols-outlined text-sm leading-none text-on-surface-variant">arrow_downward</span>
+</div>
+<button class="h-8 w-8 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high flex items-center justify-center transition-colors" title="Export Segment Priority CSV">
+<span class="material-symbols-outlined text-base leading-none">download</span>
+</button>
+</div>
+</div>
+<!-- Priority Queue Main Surface -->
+<div class="flex flex-col space-y-unit-md">
+<div class="flex items-center justify-between px-unit-xs">
+<div class="flex items-center gap-2">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Prioritized Action Queue</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-mono text-caption text-primary">Live Triage Rank</span>
+</div>
+<span class="font-label-mono text-caption text-on-surface-variant">Showing top critical interventions filtered from 142 total enterprise contracts</span>
+</div>
+<!-- Intervention Card 1: CloudScale Tech (Rank #1) -->
+<div class="bg-surface-container-low rounded p-unit-base lg:p-unit-lg shadow-md flex flex-col space-y-unit-md transition-all hover:bg-surface-container/80 relative">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-unit-md pb-unit-sm">
+<!-- Account Ident & Rank -->
+<div class="flex items-start gap-unit-base min-w-0">
+<div class="flex flex-col items-center justify-center w-12 h-12 rounded bg-surface-container-highest flex-shrink-0">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Rank</span>
+<span class="font-metric-md text-metric-md text-primary font-bold">#01</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-unit-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">CloudScale Tech</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-mono text-caption uppercase">Enterprise Tier-1</span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-mono text-caption flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+                Renewal: In 41 Days
+              </span>
+</div>
+<div class="flex flex-wrap items-center gap-unit-md text-body-sm text-on-surface-variant mt-1">
+<span>Owner: <strong class="text-on-surface font-medium">Elena Vance</strong></span>
+<span>•</span>
+<span>Contract ARR: <strong class="font-metric-sm text-metric-sm text-on-surface">$520,000</strong></span>
+<span>•</span>
+<span>Domain: <span class="font-label-mono text-caption">cloudscaletech.io</span></span>
+</div>
+</div>
+</div>
+<!-- Metric Telemetry Group -->
+<div class="flex items-center gap-unit-xl bg-surface-container-lowest p-unit-sm px-unit-base rounded">
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Priority Score</span>
+<div class="flex items-baseline gap-1">
+<span class="font-metric-xl text-metric-xl text-primary font-bold">94</span>
+<span class="font-label-mono text-caption text-on-surface-variant">/100</span>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Model P(Churn)</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-metric-md text-metric-md text-error">89%</span>
+<span class="font-label-mono text-caption text-error">+18% Δ</span>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Recoverability</span>
+<span class="font-label-mono text-caption text-tertiary uppercase font-medium bg-tertiary-container/10 px-1.5 py-0.5 rounded">High (72%)</span>
+</div>
+</div>
+</div>
+<!-- Deep Evidence Disclosure & Root Cause Matrix -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-base bg-surface-container-lowest p-unit-base rounded">
+<!-- Root Drivers -->
+<div class="lg:col-span-4 flex flex-col space-y-1.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-error">error_outline</span>
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Primary Risk Vector</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+<strong class="text-error font-medium">58% drop in active admin seats</strong> over 21 days following departure of VP Infrastructure (Primary Champion).
+          </p>
+<div class="pt-1">
+<div class="flex items-center justify-between font-label-mono text-caption text-on-surface-variant mb-1">
+<span>Telemetry Divergence</span>
+<span class="text-error">-42 pts from healthy cohort baseline</span>
+</div>
+<!-- Segmented Risk Heatstrip -->
+<div class="flex gap-1 h-1.5 w-full">
+<div class="bg-error h-full flex-1 rounded"></div>
+<div class="bg-error h-full flex-1 rounded"></div>
+<div class="bg-error h-full flex-1 rounded"></div>
+<div class="bg-primary h-full flex-1 rounded"></div>
+<div class="bg-surface-container-highest h-full flex-1 rounded"></div>
+</div>
+</div>
+</div>
+<!-- Evidence & Economic Reality -->
+<div class="lg:col-span-4 flex flex-col space-y-1.5 lg:border-l lg:border-surface-container lg:pl-unit-base">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-tertiary">check_circle</span>
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Recoverability Assessment</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Account maintains <strong class="text-on-surface font-medium">$140,000 in unbilled compute utilization</strong> this quarter. Baseline technical integration remains fully active; operational disruption is isolated to communication vacuum with interim engineering head.
+          </p>
+<div class="font-label-mono text-caption text-tertiary pt-1">
+            Salvage Expectation: $470,000 ARR with 3-year term renewal
+          </div>
+</div>
+<!-- Prescribed Action Strategy -->
+<div class="lg:col-span-4 flex flex-col space-y-1.5 lg:border-l lg:border-surface-container lg:pl-unit-base">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary">auto_fix_high</span>
+<span class="font-label-mono text-caption text-primary uppercase tracking-wider">Prescribed Action Strategy</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container text-body-sm text-on-surface space-y-1">
+<div class="font-medium text-on-surface">Executive Alignment Summit</div>
+<div class="text-on-surface-variant text-caption">Dispatch VP Customer Success to interim VP Eng (David K.) + deliver customized Q3 Utilization Value Audit.</div>
+</div>
+<div class="flex items-center justify-between text-caption font-label-mono text-on-surface-variant pt-0.5">
+<span>Playbook: EXEC-RECONNECT-V2</span>
+<span>Est. SLA: 48 Hours</span>
+</div>
+</div>
+</div>
+<!-- Action Execution Deck -->
+<div class="flex flex-wrap items-center justify-between gap-unit-sm pt-unit-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-tertiary">schedule</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Last account touch: Automated Health Pulse sent 6 hours ago (Unopened).</span>
+</div>
+<div class="flex items-center gap-unit-sm">
+<button class="h-8 px-3 rounded bg-surface-container text-on-surface font-body-sm hover:bg-surface-container-high transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base leading-none">person_add</span>
+<span>Assign to VP Success</span>
+</button>
+<button class="h-8 px-3 rounded bg-surface-container text-on-surface font-body-sm hover:bg-surface-container-high transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base leading-none">note_add</span>
+<span>Log Intervention</span>
+</button>
+<button class="h-8 px-4 rounded bg-primary-container text-on-primary-container font-body-sm font-medium hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-base leading-none">play_arrow</span>
+<span>Deploy Playbook</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Intervention Card 2: Fintech Nexus (Rank #2) -->
+<div class="bg-surface-container-low rounded p-unit-base lg:p-unit-lg shadow-md flex flex-col space-y-unit-md transition-all hover:bg-surface-container/80 relative">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-unit-md pb-unit-sm">
+<div class="flex items-start gap-unit-base min-w-0">
+<div class="flex flex-col items-center justify-center w-12 h-12 rounded bg-surface-container-highest flex-shrink-0">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Rank</span>
+<span class="font-metric-md text-metric-md text-primary font-bold">#02</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-unit-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Fintech Nexus</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-mono text-caption uppercase">Enterprise Tier-1</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-caption flex items-center gap-1">
+                Renewal: In 65 Days
+              </span>
+</div>
+<div class="flex flex-wrap items-center gap-unit-md text-body-sm text-on-surface-variant mt-1">
+<span>Owner: <strong class="text-on-surface font-medium">Marcus Thorne</strong></span>
+<span>•</span>
+<span>Contract ARR: <strong class="font-metric-sm text-metric-sm text-on-surface">$480,000</strong></span>
+<span>•</span>
+<span>Domain: <span class="font-label-mono text-caption">fintechnexus.global</span></span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-unit-xl bg-surface-container-lowest p-unit-sm px-unit-base rounded">
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Priority Score</span>
+<div class="flex items-baseline gap-1">
+<span class="font-metric-xl text-metric-xl text-primary font-bold">91</span>
+<span class="font-label-mono text-caption text-on-surface-variant">/100</span>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Model P(Churn)</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-metric-md text-metric-md text-error">84%</span>
+<span class="font-label-mono text-caption text-error">+12% Δ</span>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Recoverability</span>
+<span class="font-label-mono text-caption text-primary uppercase font-medium bg-primary-container/10 px-1.5 py-0.5 rounded">Med-High (68%)</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-base bg-surface-container-lowest p-unit-base rounded">
+<div class="lg:col-span-4 flex flex-col space-y-1.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-error">error_outline</span>
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Primary Risk Vector</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+<strong class="text-error font-medium">Competitor RFP detected</strong> in partner network; recent CSAT dipped to 2.8/5.0 due to strict rate-limiting complaints on tier limits.
+          </p>
+<div class="pt-1">
+<div class="flex items-center justify-between font-label-mono text-caption text-on-surface-variant mb-1">
+<span>Sentiment Telemetry</span>
+<span class="text-error">High friction in 4 recent Zendesk tickets</span>
+</div>
+<div class="flex gap-1 h-1.5 w-full">
+<div class="bg-error h-full flex-1 rounded"></div>
+<div class="bg-error h-full flex-1 rounded"></div>
+<div class="bg-primary h-full flex-1 rounded"></div>
+<div class="bg-surface-container-highest h-full flex-1 rounded"></div>
+<div class="bg-surface-container-highest h-full flex-1 rounded"></div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col space-y-1.5 lg:border-l lg:border-surface-container lg:pl-unit-base">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-tertiary">check_circle</span>
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Recoverability Assessment</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Proprietary <strong class="text-on-surface font-medium">Security Vault integration is deeply embedded</strong> in core payment pipeline. Switching costs exceed $600k and 9 months migration duration. Roadblock is purely commercial/contract structuring.
+          </p>
+<div class="font-label-mono text-caption text-tertiary pt-1">
+            Switching Moat: High • Deal Desk room: 14% discount leeway
+          </div>
+</div>
+<div class="lg:col-span-4 flex flex-col space-y-1.5 lg:border-l lg:border-surface-container lg:pl-unit-base">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary">auto_fix_high</span>
+<span class="font-label-mono text-caption text-primary uppercase tracking-wider">Prescribed Action Strategy</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container text-body-sm text-on-surface space-y-1">
+<div class="font-medium text-on-surface">Commercial Pricing Review & Roadmap Briefing</div>
+<div class="text-on-surface-variant text-caption">Schedule Deal Desk consultation to restructure burst limits; offer private preview of v4.5 High-Throughput Engine.</div>
+</div>
+<div class="flex items-center justify-between text-caption font-label-mono text-on-surface-variant pt-0.5">
+<span>Playbook: DEAL-RESTRUCTURE-COMM</span>
+<span>Est. SLA: 24 Hours</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-unit-sm pt-unit-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-on-surface-variant">history</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Assigned CSM flagged renewal risk during Q3 Business Review.</span>
+</div>
+<div class="flex items-center gap-unit-sm">
+<button class="h-8 px-3 rounded bg-surface-container text-on-surface font-body-sm hover:bg-surface-container-high transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base leading-none">payments</span>
+<span>Assign to Deal Desk</span>
+</button>
+<button class="h-8 px-3 rounded bg-surface-container text-on-surface font-body-sm hover:bg-surface-container-high transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base leading-none">note_add</span>
+<span>Log Intervention</span>
+</button>
+<button class="h-8 px-4 rounded bg-primary-container text-on-primary-container font-body-sm font-medium hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-base leading-none">play_arrow</span>
+<span>Deploy Playbook</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Intervention Card 3: Vertex Media (Rank #3) -->
+<div class="bg-surface-container-low rounded p-unit-base lg:p-unit-lg shadow-md flex flex-col space-y-unit-md transition-all hover:bg-surface-container/80 relative">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-unit-md pb-unit-sm">
+<div class="flex items-start gap-unit-base min-w-0">
+<div class="flex flex-col items-center justify-center w-12 h-12 rounded bg-surface-container-highest flex-shrink-0">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Rank</span>
+<span class="font-metric-md text-metric-md text-primary font-bold">#03</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-unit-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Vertex Media</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-mono text-caption uppercase">Strategic Growth</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-caption flex items-center gap-1">
+                Renewal: In 72 Days
+              </span>
+</div>
+<div class="flex flex-wrap items-center gap-unit-md text-body-sm text-on-surface-variant mt-1">
+<span>Owner: <strong class="text-on-surface font-medium">Sarah Jenkins</strong></span>
+<span>•</span>
+<span>Contract ARR: <strong class="font-metric-sm text-metric-sm text-on-surface">$395,000</strong></span>
+<span>•</span>
+<span>Domain: <span class="font-label-mono text-caption">vertexmedia.tv</span></span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-unit-xl bg-surface-container-lowest p-unit-sm px-unit-base rounded">
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Priority Score</span>
+<div class="flex items-baseline gap-1">
+<span class="font-metric-xl text-metric-xl text-primary font-bold">86</span>
+<span class="font-label-mono text-caption text-on-surface-variant">/100</span>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Model P(Churn)</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-metric-md text-metric-md text-error">82%</span>
+<span class="font-label-mono text-caption text-error">+6% Δ</span>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Recoverability</span>
+<span class="font-label-mono text-caption text-tertiary uppercase font-medium bg-tertiary-container/10 px-1.5 py-0.5 rounded">High (84%)</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-base bg-surface-container-lowest p-unit-base rounded">
+<div class="lg:col-span-4 flex flex-col space-y-1.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-error">error_outline</span>
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Primary Risk Vector</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+<strong class="text-error font-medium">Single-user dependency crisis</strong>. Lead Pipeline Architect retired; junior team lacking platform mastery, triggering a 40% reduction in query executions.
+          </p>
+<div class="pt-1">
+<div class="flex items-center justify-between font-label-mono text-caption text-on-surface-variant mb-1">
+<span>Platform Adoption</span>
+<span class="text-error">Stalled on advanced ETL workflows</span>
+</div>
+<div class="flex gap-1 h-1.5 w-full">
+<div class="bg-error h-full flex-1 rounded"></div>
+<div class="bg-primary h-full flex-1 rounded"></div>
+<div class="bg-primary h-full flex-1 rounded"></div>
+<div class="bg-surface-container-highest h-full flex-1 rounded"></div>
+<div class="bg-surface-container-highest h-full flex-1 rounded"></div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col space-y-1.5 lg:border-l lg:border-surface-container lg:pl-unit-base">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-tertiary">check_circle</span>
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Recoverability Assessment</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            User team is <strong class="text-on-surface font-medium">actively requesting enablement and training</strong>. Zero competitive displacement threat; account purely requires hands-on customer engineering sessions.
+          </p>
+<div class="font-label-mono text-caption text-tertiary pt-1">
+            Enablement appetite: High • 8 developers ready for certification
+          </div>
+</div>
+<div class="lg:col-span-4 flex flex-col space-y-1.5 lg:border-l lg:border-surface-container lg:pl-unit-base">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary">auto_fix_high</span>
+<span class="font-label-mono text-caption text-primary uppercase tracking-wider">Prescribed Action Strategy</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container text-body-sm text-on-surface space-y-1">
+<div class="font-medium text-on-surface">Solutions Architect Hands-on Enablement</div>
+<div class="text-on-surface-variant text-caption">Schedule 3-part live technical workshop with the new engineering pod. Grant 60-day sandbox environments.</div>
+</div>
+<div class="flex items-center justify-between text-caption font-label-mono text-on-surface-variant pt-0.5">
+<span>Playbook: ENABLEMENT-KICKSTART</span>
+<span>Est. SLA: 3 Days</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-unit-sm pt-unit-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-tertiary">school</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Technical Success Lead ready to schedule live sessions.</span>
+</div>
+<div class="flex items-center gap-unit-sm">
+<button class="h-8 px-3 rounded bg-surface-container text-on-surface font-body-sm hover:bg-surface-container-high transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base leading-none">terminal</span>
+<span>Assign Solutions Architect</span>
+</button>
+<button class="h-8 px-3 rounded bg-surface-container text-on-surface font-body-sm hover:bg-surface-container-high transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base leading-none">note_add</span>
+<span>Log Intervention</span>
+</button>
+<button class="h-8 px-4 rounded bg-primary-container text-on-primary-container font-body-sm font-medium hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-base leading-none">play_arrow</span>
+<span>Deploy Playbook</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Intervention Card 4: DataSphere Corp (Rank #4) -->
+<div class="bg-surface-container-low rounded p-unit-base lg:p-unit-lg shadow-md flex flex-col space-y-unit-md transition-all hover:bg-surface-container/80 relative">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-unit-md pb-unit-sm">
+<div class="flex items-start gap-unit-base min-w-0">
+<div class="flex flex-col items-center justify-center w-12 h-12 rounded bg-surface-container-highest flex-shrink-0">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Rank</span>
+<span class="font-metric-md text-metric-md text-primary font-bold">#04</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-unit-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">DataSphere Corp</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-mono text-caption uppercase">Enterprise Tier-2</span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-mono text-caption flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+                Renewal: In 28 Days
+              </span>
+</div>
+<div class="flex flex-wrap items-center gap-unit-md text-body-sm text-on-surface-variant mt-1">
+<span>Owner: <strong class="text-on-surface font-medium">Elena Vance</strong></span>
+<span>•</span>
+<span>Contract ARR: <strong class="font-metric-sm text-metric-sm text-on-surface">$340,000</strong></span>
+<span>•</span>
+<span>Domain: <span class="font-label-mono text-caption">datasphere.cloud</span></span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-unit-xl bg-surface-container-lowest p-unit-sm px-unit-base rounded">
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Priority Score</span>
+<div class="flex items-baseline gap-1">
+<span class="font-metric-xl text-metric-xl text-primary font-bold">83</span>
+<span class="font-label-mono text-caption text-on-surface-variant">/100</span>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Model P(Churn)</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-metric-md text-metric-md text-error">78%</span>
+<span class="font-label-mono text-caption text-error">+14% Δ</span>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Recoverability</span>
+<span class="font-label-mono text-caption text-error uppercase font-medium bg-error-container/20 px-1.5 py-0.5 rounded">Urgent (61%)</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-base bg-surface-container-lowest p-unit-base rounded">
+<div class="lg:col-span-4 flex flex-col space-y-1.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-error">error_outline</span>
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Primary Risk Vector</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+<strong class="text-error font-medium">3 unresolved P1 API latency incidents</strong> logged in past 14 days during batch sync windows. Renewal paper currently frozen by their Head of Procurement.
+          </p>
+<div class="pt-1">
+<div class="flex items-center justify-between font-label-mono text-caption text-on-surface-variant mb-1">
+<span>SLA Breaches</span>
+<span class="text-error">99.1% actual vs 99.95% committed SLA</span>
+</div>
+<div class="flex gap-1 h-1.5 w-full">
+<div class="bg-error h-full flex-1 rounded"></div>
+<div class="bg-error h-full flex-1 rounded"></div>
+<div class="bg-error h-full flex-1 rounded"></div>
+<div class="bg-surface-container-highest h-full flex-1 rounded"></div>
+<div class="bg-surface-container-highest h-full flex-1 rounded"></div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col space-y-1.5 lg:border-l lg:border-surface-container lg:pl-unit-base">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-tertiary">check_circle</span>
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Recoverability Assessment</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Technical team values the platform architecture. Account will renew if <strong class="text-on-surface font-medium">infrastructure engineering provides documented root cause</strong> and assigns dedicated cluster resources.
+          </p>
+<div class="font-label-mono text-caption text-tertiary pt-1">
+            Cluster patch deployed in us-east-2; requires executive signoff
+          </div>
+</div>
+<div class="lg:col-span-4 flex flex-col space-y-1.5 lg:border-l lg:border-surface-container lg:pl-unit-base">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary">auto_fix_high</span>
+<span class="font-label-mono text-caption text-primary uppercase tracking-wider">Prescribed Action Strategy</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container text-body-sm text-on-surface space-y-1">
+<div class="font-medium text-on-surface">VP Engineering Root-Cause Dispatch</div>
+<div class="text-on-surface-variant text-caption">Executive bridge with VP Eng + issuance of formal SLA credit and dedicated VPC migration guarantee.</div>
+</div>
+<div class="flex items-center justify-between text-caption font-label-mono text-on-surface-variant pt-0.5">
+<span>Playbook: P1-ROOT-CAUSE-ESCALATE</span>
+<span>Est. SLA: 12 Hours</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-unit-sm pt-unit-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-error">warning</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Critical contract expiration threshold: <30 days remaining.</span>
+</div>
+<div class="flex items-center gap-unit-sm">
+<button class="h-8 px-3 rounded bg-surface-container text-on-surface font-body-sm hover:bg-surface-container-high transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base leading-none">engineering</span>
+<span>Engineering Escalation</span>
+</button>
+<button class="h-8 px-3 rounded bg-surface-container text-on-surface font-body-sm hover:bg-surface-container-high transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base leading-none">note_add</span>
+<span>Log Intervention</span>
+</button>
+<button class="h-8 px-4 rounded bg-primary-container text-on-primary-container font-body-sm font-medium hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-base leading-none">play_arrow</span>
+<span>Deploy Playbook</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Weekly Intervention Velocity & Resolution Tracker -->
+<div class="bg-surface-container-lowest p-unit-base lg:p-unit-lg rounded shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-unit-lg">
+<div class="flex flex-col space-y-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-tertiary">speed</span>
+<span class="font-label-mono text-caption text-on-surface uppercase tracking-wider">Weekly Intervention Velocity & Resolution Tracker</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Historical outcomes demonstrating operational leverage across active CSM salvages.
+      </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-unit-base lg:gap-unit-xl flex-shrink-0">
+<!-- Velocity Metric 1 -->
+<div class="flex flex-col bg-surface-container p-unit-sm px-unit-base rounded">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Intervened This Week</span>
+<div class="flex items-baseline gap-2 mt-0.5">
+<span class="font-metric-lg text-metric-lg text-on-surface font-semibold">14</span>
+<span class="font-label-mono text-caption text-tertiary font-medium">($2.8M preserved)</span>
+</div>
+</div>
+<!-- Velocity Metric 2 -->
+<div class="flex flex-col bg-surface-container p-unit-sm px-unit-base rounded">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Avg Time to First Outreach</span>
+<div class="flex items-baseline gap-2 mt-0.5">
+<span class="font-metric-lg text-metric-lg text-on-surface font-semibold">1.4 <span class="text-headline-sm font-normal text-on-surface-variant">days</span></span>
+<span class="font-label-mono text-caption text-tertiary font-medium">(-0.6d Δ)</span>
+</div>
+</div>
+<!-- Velocity Metric 3 -->
+<div class="flex flex-col bg-surface-container p-unit-sm px-unit-base rounded">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">30-Day Win Rate</span>
+<div class="flex items-baseline gap-2 mt-0.5">
+<span class="font-metric-lg text-metric-lg text-tertiary font-semibold">74.2%</span>
+<span class="font-label-mono text-caption text-on-surface-variant">renewed</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interactions for action execution controls
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      if (this.innerText.includes('Deploy Playbook')) {
+        const originalText = this.innerHTML;
+        this.innerHTML = `<span class="material-symbols-outlined text-base leading-none animate-spin">refresh</span><span>Deploying...</span>`;
+        this.classList.add('opacity-80', 'pointer-events-none');
+        setTimeout(() => {
+          this.innerHTML = `<span class="material-symbols-outlined text-base leading-none text-on-primary">check</span><span>Playbook Active</span>`;
+          this.classList.remove('opacity-80');
+          this.classList.replace('bg-primary-container', 'bg-tertiary');
+          this.classList.replace('text-on-primary-container', 'text-on-tertiary');
+        }, 850);
+      }
+    });
+  });
+</script></main></div></body></html>

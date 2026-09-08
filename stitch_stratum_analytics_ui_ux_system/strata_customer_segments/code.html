@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#343537","on-background":"#e3e2e5","on-secondary":"#00344d","on-secondary-container":"#00344e","outline-variant":"#554336","tertiary-fixed":"#6ffbbe","error":"#ffb4ab","tertiary-container":"#00a572","on-error-container":"#ffdad6","on-error":"#690005","on-secondary-fixed-variant":"#004c6e","surface-bright":"#38393b","on-tertiary-fixed":"#002113","surface-container-low":"#1b1c1e","error-container":"#93000a","on-tertiary":"#003824","on-surface-variant":"#dbc2b0","surface-container-high":"#292a2c","primary":"#ffb77d","inverse-surface":"#e3e2e5","tertiary-fixed-dim":"#4edea3","background":"#121315","surface-tint":"#ffb77d","on-surface":"#e3e2e5","secondary":"#89ceff","primary-container":"#d97707","surface-dim":"#121315","surface":"#121315","surface-container-lowest":"#0d0e10","on-primary-fixed-variant":"#6e3900","on-tertiary-container":"#00311f","on-tertiary-fixed-variant":"#005236","on-primary-fixed":"#2f1500","inverse-primary":"#904d00","secondary-container":"#00a2e6","on-primary-container":"#432100","tertiary":"#4edea3","secondary-fixed-dim":"#89ceff","primary-fixed":"#ffdcc3","on-secondary-fixed":"#001e2f","surface-container":"#1f2022","primary-fixed-dim":"#ffb77d","surface-variant":"#343537","outline":"#a38c7c","secondary-fixed":"#c9e6ff","on-primary":"#4d2600"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"unit-md":"12px","unit-3xl":"48px","unit-sm":"8px","unit-lg":"20px","unit-2xs":"2px","unit-xl":"24px","unit-2xl":"32px","gutter-compact":"12px","gutter-spacious":"24px","unit-xs":"4px","unit-base":"16px","gutter-default":"16px"},fontFamily:{"metric-md":["JetBrains Mono"],"body-md":["Geist"],"body-lg":["Geist"],"display-lg":["Geist"],caption:["Geist"],"metric-sm":["JetBrains Mono"],"headline-sm":["Geist"],"headline-md":["Geist"],"label-mono":["JetBrains Mono"],"display-xl":["Geist"],"metric-xl":["JetBrains Mono"],"body-sm":["Geist"],"display-lg-mobile":["Geist"]},fontSize:{"metric-md":["20px",{lineHeight:"26px",letterSpacing:"-0.02em",fontWeight:"500"}],"body-md":["13px",{lineHeight:"20px",letterSpacing:"-0.005em",fontWeight:"400"}],"body-lg":["15px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"400"}],"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.025em",fontWeight:"600"}],caption:["11px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"400"}],"metric-sm":["14px",{lineHeight:"18px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-sm":["18px",{lineHeight:"26px",letterSpacing:"-0.015em",fontWeight:"500"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"500"}],"label-mono":["11px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"500"}],"display-xl":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"600"}],"metric-xl":["32px",{lineHeight:"38px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"display-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between select-none shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-unit-base pt-unit-base pb-unit-md flex items-center justify-between gap-unit-sm"><div class="flex items-center gap-unit-sm min-w-0"><img alt="Strata Customer Intelligence Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1U7_5u7jai-nnFVYhGUXwryFi3D5ZRMFMDxHLFsjWIepyUlBpqTUaCbyx3qYpxZGDRzbrnrWtuoQ1DNswQLpu-PEpJRJRlevSNQPD8zBEi5RhM_EXkEv3xr7EcSWPCZ3DFK_o0Z4eCxpeTKWuKUjv_yljZ_-ZsVTf-lHHk2etByqODuVzokyc-PwHN2z8nq-uXUTqZgrpuA-L57me5-ZIRxXOEcwaL3YVbmevwTI-BX5IHZfh_QIESZddY"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate leading-none">Strata</span><span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-widest truncate">Intelligence</span></div></div><div class="flex items-center gap-1.5 px-unit-xs py-0.5 rounded bg-surface-container-high"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-mono text-caption text-tertiary uppercase">Live</span></div></div><div class="px-unit-base pb-unit-base"><div class="w-full flex items-center justify-between px-unit-sm py-unit-xs rounded bg-surface-container-low text-on-surface-variant cursor-pointer hover:bg-surface-container hover:text-on-surface transition-colors"><div class="flex flex-col min-w-0"><span class="font-label-mono text-caption text-on-surface-variant uppercase">Workspace</span><span class="font-body-sm text-body-sm text-on-surface truncate font-medium">Acme Enterprise (Production)</span></div><span class="material-symbols-outlined text-sm flex-shrink-0 ml-1">unfold_more</span></div></div><div class="px-unit-base space-y-unit-lg overflow-y-auto"><div class="space-y-1"><div class="px-unit-sm font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Workspaces / Intelligence</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded"><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-lg leading-none">space_dashboard</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="churn-intelligence" href="#"><span class="material-symbols-outlined text-lg leading-none">warning</span><span class="font-body-md text-body-md">Churn Intelligence</span></a><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="customer-value" href="#"><span class="material-symbols-outlined text-lg leading-none">trending_up</span><span class="font-body-md text-body-md">Customer Value</span></a><a aria-current="page" class="flex items-center gap-unit-sm px-unit-sm py-1.5 transition-colors bg-primary-container text-on-primary-container font-medium rounded" data-path="customer-segments" href="#"><span class="material-symbols-outlined text-lg leading-none">pie_chart</span><span class="font-body-md text-body-md">Customer Segments</span></a><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="retention-priorities" href="#"><span class="material-symbols-outlined text-lg leading-none">bolt</span><span class="font-body-md text-body-md">Retention Priorities</span></a></nav></div><div class="space-y-1"><div class="px-unit-sm font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Exploration</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded"><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="customer-explorer" href="#"><span class="material-symbols-outlined text-lg leading-none">table_chart</span><span class="font-body-md text-body-md">Customer Explorer</span></a><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="cohort-matrix" href="#"><span class="material-symbols-outlined text-lg leading-none">grid_view</span><span class="font-body-md text-body-md">Cohort Matrix</span></a></nav></div><div class="space-y-1"><div class="px-unit-sm font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Management</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded"><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="predictive-models" href="#"><span class="material-symbols-outlined text-lg leading-none">memory</span><span class="font-body-md text-body-md">Predictive Models</span></a><a class="flex items-center gap-unit-sm px-unit-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="automated-triggers" href="#"><span class="material-symbols-outlined text-lg leading-none">tune</span><span class="font-body-md text-body-md">Automated Triggers</span></a></nav></div></div></div><div class="p-unit-base flex flex-col gap-unit-sm bg-surface-container-lowest"><div class="flex items-center justify-between px-unit-sm py-unit-xs rounded bg-surface-container-low"><div class="flex items-center gap-2 min-w-0"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-mono text-caption text-on-surface-variant truncate">Model v4.2 • Updated 8m ago</span></div><span class="font-label-mono text-caption text-tertiary">OK</span></div><div class="flex items-center justify-between pt-unit-xs"><div class="flex items-center gap-unit-sm min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw0FVLRN3MV2ghhNW1d-evuy9rhFLksWZYY5syXzCU_95_AMS0e6ExXozSY81KEP0iaCnr1G5aYc0Ej25E5DmGtsf-XE6wUAGasIoTyA1fvPEKZMZxotm3FiPN3tQxe5T9A2cRuthP2AIW-CldcUBHGvI2JX_dFixOLtQ7dCqeMqvp5ey_yOBRN0zf95HGnApB4-iiGanzLA_lpE0x5dx4Tf0EagfOZcmlpsSlRzclfrYKJITOf-gG"/><div class="flex flex-col min-w-0"><span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Elena Vance</span><span class="font-caption text-caption text-on-surface-variant truncate">VP Customer Success</span></div></div><button aria-label="Settings" class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-lg leading-none">settings</span></button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-unit-xl"><div class="flex items-center gap-unit-base"><div class="flex items-center gap-2 font-label-mono text-caption text-on-surface-variant"><span class="text-on-surface-variant">Strata</span><span class="text-surface-container-highest">/</span><span class="text-on-surface-variant">Customer Intelligence</span><span class="text-surface-container-highest">/</span><span class="text-primary font-medium">Overview</span></div><div class="hidden xl:flex items-center gap-unit-xs"><div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-caption text-on-surface-variant font-label-mono"><span class="text-on-surface-variant/70">Period:</span><span class="text-on-surface">Last 30 Days (Trailing)</span><span class="material-symbols-outlined text-xs leading-none">arrow_drop_down</span></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-caption text-on-surface-variant font-label-mono"><span class="text-on-surface-variant/70">Compare:</span><span class="text-on-surface">Q3 Prior</span></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-caption text-on-surface font-label-mono"><span class="text-on-surface-variant/70">Segment:</span><span>Enterprise + Mid-Market</span></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-caption text-on-surface font-label-mono"><span class="text-on-surface-variant/70">Health:</span><span>All</span></div></div></div><div class="flex items-center gap-unit-md"><div class="hidden md:flex items-center gap-2 bg-surface-container-low px-unit-md py-1.5 rounded cursor-pointer text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-base leading-none">search</span><span class="font-body-sm text-body-sm">⌘K to query cohorts or drivers...</span><span class="font-label-mono text-caption px-1 rounded bg-surface-container-high text-on-surface-variant">⌘K</span></div><div class="flex items-center gap-unit-sm"><button class="h-9 px-3.5 rounded bg-surface-container text-on-surface font-body-sm hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center gap-1.5"><span class="material-symbols-outlined text-base leading-none">file_download</span><span>Export Dossier</span></button><button class="h-9 px-3.5 rounded bg-primary-container text-on-primary-container font-body-sm font-medium hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1.5"><span class="material-symbols-outlined text-base leading-none">add_circle</span><span>New Query</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover ml-2 ring-1 ring-surface-container-highest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw0FVLRN3MV2ghhNW1d-evuy9rhFLksWZYY5syXzCU_95_AMS0e6ExXozSY81KEP0iaCnr1G5aYc0Ej25E5DmGtsf-XE6wUAGasIoTyA1fvPEKZMZxotm3FiPN3tQxe5T9A2cRuthP2AIW-CldcUBHGvI2JX_dFixOLtQ7dCqeMqvp5ey_yOBRN0zf95HGnApB4-iiGanzLA_lpE0x5dx4Tf0EagfOZcmlpsSlRzclfrYKJITOf-gG"/></div></div></header><main class="relative w-full pt-16 bg-surface min-h-screen px-unit-xl py-unit-base"><div class="flex flex-col w-full pb-unit-3xl space-y-unit-xl">
+<!-- Breadcrumb and Context Action Ribbon -->
+<section class="flex flex-col lg:flex-row lg:items-center justify-between gap-unit-md bg-surface-container-low p-unit-base rounded shadow-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 font-label-mono text-caption text-on-surface-variant uppercase tracking-wider mb-1">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Telemetry Layer v4.8</span>
+<span class="text-surface-container-highest">/</span>
+<span>Clustering Engine: k-means (k=5)</span>
+<span class="text-surface-container-highest">/</span>
+<span class="text-primary">Recalibrated 14h ago</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Behavioral & Economic Segmentation</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl mt-0.5">
+        Dynamic multi-vector clustering synthesized weekly across continuous API throughput, enterprise seat saturation velocity, executive touch cadence, and support escalation weight.
+      </p>
+</div>
+<div class="flex flex-wrap items-center gap-unit-sm self-start lg:self-center flex-shrink-0">
+<div class="flex items-center bg-surface-container p-1 rounded">
+<button class="px-2.5 py-1 rounded bg-surface-container-highest font-label-mono text-caption text-on-surface font-medium shadow-sm transition-colors">Behavioral Clusters</button>
+<button class="px-2.5 py-1 rounded font-label-mono text-caption text-on-surface-variant hover:text-on-surface transition-colors">Revenue Tiers</button>
+<button class="px-2.5 py-1 rounded font-label-mono text-caption text-on-surface-variant hover:text-on-surface transition-colors">Product Maturity</button>
+<button class="px-2.5 py-1 rounded font-label-mono text-caption text-on-surface-variant hover:text-on-surface transition-colors">Lifecycle</button>
+</div>
+<button class="h-9 px-3 rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-body-sm font-medium flex items-center gap-1.5 transition-colors shadow-sm" id="recalcBtn">
+<span class="material-symbols-outlined text-base leading-none text-primary">sync</span>
+<span>Recalculate Boundaries</span>
+</button>
+</div>
+</section>
+<!-- Portfolio Distribution Composite & Telemetry Readouts -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-unit-base">
+<!-- Distribution Visual Bar Card (7 cols) -->
+<div class="xl:col-span-7 bg-surface-container-low p-unit-base rounded flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="font-label-mono text-caption uppercase text-on-surface-variant tracking-wider">Macro Portfolio Distribution</span>
+<span class="font-caption text-caption text-on-surface-variant/70">1,430 Tracked Accounts • $113.2M ARR</span>
+</div>
+<span class="font-label-mono text-caption text-tertiary">Silhouette Score: 0.82 (High Cohesion)</span>
+</div>
+<!-- Proportional Segment Multi-Bar -->
+<div class="w-full h-3 rounded overflow-hidden flex bg-surface-container-highest shadow-inner">
+<div class="bg-primary-container h-full relative group cursor-pointer" style="width: 38%;" title="Enterprise Deep Integrators: 38% ARR">
+<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="bg-error h-full relative group cursor-pointer" style="width: 15%;" title="High-Touch Fragile Giants: 15% ARR">
+<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="bg-tertiary h-full relative group cursor-pointer" style="width: 22%;" title="Autonomous Growth Champions: 22% ARR">
+<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="bg-outline-variant h-full relative group cursor-pointer" style="width: 11%;" title="Under-Adopted Legacy Cohort: 11% ARR">
+<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="bg-secondary-container h-full relative group cursor-pointer" style="width: 14%;" title="Velocity Mid-Market: 14% ARR">
+<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+</div>
+<!-- Inline Legend & Share Badges -->
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-unit-sm mt-unit-base pt-unit-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-mono text-caption text-on-surface truncate">Deep Integrators</span>
+</div>
+<span class="font-metric-sm text-metric-sm text-on-surface mt-1">$42.6M <span class="font-caption text-caption text-on-surface-variant font-normal">/ 38%</span></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-label-mono text-caption text-on-surface truncate">Fragile Giants</span>
+</div>
+<span class="font-metric-sm text-metric-sm text-on-surface mt-1">$16.8M <span class="font-caption text-caption text-on-surface-variant font-normal">/ 15%</span></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-mono text-caption text-on-surface truncate">Auto Champions</span>
+</div>
+<span class="font-metric-sm text-metric-sm text-on-surface mt-1">$24.8M <span class="font-caption text-caption text-on-surface-variant font-normal">/ 22%</span></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-label-mono text-caption text-on-surface truncate">Under-Adopted</span>
+</div>
+<span class="font-metric-sm text-metric-sm text-on-surface mt-1">$12.4M <span class="font-caption text-caption text-on-surface-variant font-normal">/ 11%</span></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-mono text-caption text-on-surface truncate">Velocity Mid</span>
+</div>
+<span class="font-metric-sm text-metric-sm text-on-surface mt-1">$16.6M <span class="font-caption text-caption text-on-surface-variant font-normal">/ 14%</span></span>
+</div>
+</div>
+</div>
+<!-- Footnote Telemetry Line -->
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-mono text-caption bg-surface-container p-2 rounded">
+<span>Variance Shift: <strong class="text-tertiary">+3.4%</strong> migration toward autonomous self-expansion since Q2 recalibration.</span>
+<span class="hidden md:inline">Sample: 99.4% telemetry completeness</span>
+</div>
+</div>
+<!-- Triple Metric Cards (5 cols) -->
+<div class="xl:col-span-5 grid grid-cols-1 sm:grid-cols-3 gap-unit-base">
+<!-- Card 1: Expansion Leader -->
+<div class="bg-surface-container-low p-unit-base rounded flex flex-col justify-between shadow-sm">
+<div class="flex items-start justify-between">
+<span class="font-label-mono text-caption uppercase text-on-surface-variant">Top Expansion Velocity</span>
+<span class="material-symbols-outlined text-tertiary text-lg">bolt</span>
+</div>
+<div class="my-2">
+<div class="font-metric-xl text-metric-xl text-on-surface">+34.8%</div>
+<div class="font-body-sm text-body-sm text-tertiary font-medium mt-0.5">Autonomous Champions</div>
+</div>
+<div class="font-caption text-caption text-on-surface-variant">
+          Avg 1.8 seats added/day without human sales involvement.
+        </div>
+</div>
+<!-- Card 2: Churn Exposure -->
+<div class="bg-surface-container-low p-unit-base rounded flex flex-col justify-between shadow-sm">
+<div class="flex items-start justify-between">
+<span class="font-label-mono text-caption uppercase text-on-surface-variant">Highest Exposure</span>
+<span class="material-symbols-outlined text-error text-lg">warning</span>
+</div>
+<div class="my-2">
+<div class="font-metric-xl text-metric-xl text-error">$16.8M</div>
+<div class="font-body-sm text-body-sm text-error font-medium mt-0.5">Fragile Giants (42 Accts)</div>
+</div>
+<div class="font-caption text-caption text-on-surface-variant">
+          Mean churn likelihood calculated at 38.4% within 180D.
+        </div>
+</div>
+<!-- Card 3: Fastest Archetype Growth -->
+<div class="bg-surface-container-low p-unit-base rounded flex flex-col justify-between shadow-sm">
+<div class="flex items-start justify-between">
+<span class="font-label-mono text-caption uppercase text-on-surface-variant">Volume Surge</span>
+<span class="material-symbols-outlined text-secondary text-lg">trending_up</span>
+</div>
+<div class="my-2">
+<div class="font-metric-xl text-metric-xl text-on-surface">684 <span class="font-caption text-caption text-on-surface-variant font-normal">Org</span></div>
+<div class="font-body-sm text-body-sm text-secondary font-medium mt-0.5">Velocity Mid-Market</div>
+</div>
+<div class="font-caption text-caption text-on-surface-variant">
+          48% of total client logos with consistent 104% NRR.
+        </div>
+</div>
+</div>
+</section>
+<!-- Dossier Header & Section Anchor -->
+<div class="flex items-center justify-between pt-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<span class="font-label-mono text-caption uppercase tracking-wider text-primary px-2 py-0.5 rounded bg-surface-container-high">Segment Dossiers</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">5 Distinct Behavioral Clusters • Sequential In-Depth Risk & Value Diagnostic</span>
+</div>
+<div class="font-label-mono text-caption text-on-surface-variant hidden sm:block">Sorted by Strategic Priority & Impact Weight</div>
+</div>
+<!-- Segment Dossiers: Deep Narrative & Quantitative Profiles -->
+<div class="space-y-unit-base">
+<!-- DOSSIER 1: Enterprise Deep Integrators -->
+<article class="bg-surface-container-low rounded p-unit-lg shadow-sm transition-all hover:bg-surface-container">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-xl">
+<!-- Left: Behavioral Archetype & Qualitative Meaning (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col justify-between space-y-unit-md">
+<div>
+<div class="flex flex-wrap items-center gap-unit-sm mb-unit-xs">
+<span class="font-label-mono text-caption px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-medium">CLUSTER 01</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Enterprise Deep Integrators</h2>
+<span class="font-label-mono text-caption px-2 py-0.5 rounded bg-tertiary/10 text-tertiary">Foundation Archetype</span>
+</div>
+<div class="mt-unit-md space-y-unit-sm">
+<div class="bg-surface-container-lowest p-3 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider block mb-1">Defining Behavioral Signature</span>
+<p class="font-body-md text-body-md text-on-surface">
+                  Accounts operate with <strong class="text-on-surface font-medium">>4 custom production API endpoints</strong>, maintain <strong class="text-tertiary font-medium">>85% DAU/WAU sticky ratio</strong>, and cross-pollinate work across minimum 3 siloed departments (Engineering, Infrastructure Sec, Enterprise Ops).
+                </p>
+</div>
+<div class="p-3 bg-surface-container-high/40 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider block mb-1">Business Meaning & Embedding</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Irreplaceable infrastructure tier. Once workflow mesh hits >3 systems, historical gross churn approaches mathematical zero. High expansion velocity driven by intra-company team invitations.
+                </p>
+</div>
+</div>
+</div>
+<!-- Strategic Directive Strip -->
+<div class="bg-surface-container-highest/60 p-unit-md rounded flex items-start gap-unit-sm">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0 mt-0.5">verified</span>
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-primary uppercase font-medium">Strategic Directive</span>
+<span class="font-body-sm text-body-sm text-on-surface">Proactively execute 3-year commitments with custom volume tier concessions; grant white-glove preview access to v5 automated pipeline releases.</span>
+</div>
+</div>
+</div>
+<!-- Right: Telemetry Metrics & Visual Telemetry (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-unit-md rounded flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-unit-sm">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Telemetry Diagnostics</span>
+<span class="font-label-mono text-caption text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Health 96/100
+              </span>
+</div>
+<!-- Quantitative Quad Grid -->
+<div class="grid grid-cols-2 gap-unit-sm mt-unit-xs">
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">Accounts / Share</span>
+<span class="font-metric-md text-metric-md text-on-surface block mt-1">184 <span class="font-caption text-caption text-on-surface-variant">(12.9%)</span></span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">ARR Contribution</span>
+<span class="font-metric-md text-metric-md text-primary block mt-1">$42.6M <span class="font-caption text-caption text-on-surface-variant">(37.6%)</span></span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">Avg Contract Value</span>
+<span class="font-metric-md text-metric-md text-on-surface block mt-1">$231.5k<span class="font-caption text-caption text-on-surface-variant">/yr</span></span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">Churn Probability</span>
+<span class="font-metric-md text-metric-md text-tertiary block mt-1">1.2% <span class="font-caption text-caption text-on-surface-variant font-normal">P(90d)</span></span>
+</div>
+</div>
+<!-- Churn Risk Heatstrip Segment -->
+<div class="mt-4">
+<div class="flex justify-between font-label-mono text-caption text-on-surface-variant mb-1">
+<span>Vector Stability Index</span>
+<span class="text-tertiary">Negligible Exposure</span>
+</div>
+<div class="flex gap-1 w-full h-1.5">
+<div class="flex-1 bg-tertiary rounded-sm"></div>
+<div class="flex-1 bg-tertiary rounded-sm"></div>
+<div class="flex-1 bg-tertiary rounded-sm"></div>
+<div class="flex-1 bg-tertiary rounded-sm"></div>
+<div class="flex-1 bg-tertiary rounded-sm"></div>
+<div class="flex-1 bg-tertiary rounded-sm"></div>
+<div class="flex-1 bg-tertiary rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+</div>
+</div>
+</div>
+<!-- Quick Action Drawer trigger -->
+<div class="pt-3 mt-3 flex items-center justify-between">
+<span class="font-caption text-caption text-on-surface-variant font-label-mono">Cohort Tag: #SYS_DEEP_HOOK</span>
+<button class="font-body-sm text-body-sm text-primary hover:text-primary-fixed flex items-center gap-1">
+<span>Inspect Cohort</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- DOSSIER 2: High-Touch Fragile Giants (Critical Risk) -->
+<article class="bg-surface-container-low rounded p-unit-lg shadow-sm transition-all hover:bg-surface-container">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-xl">
+<!-- Left: Behavioral Archetype & Qualitative Meaning (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col justify-between space-y-unit-md">
+<div>
+<div class="flex flex-wrap items-center gap-unit-sm mb-unit-xs">
+<span class="font-label-mono text-caption px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-medium">CLUSTER 02</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">High-Touch Fragile Giants</h2>
+<span class="font-label-mono text-caption px-2 py-0.5 rounded bg-error/15 text-error font-medium">High Economic Exposure</span>
+</div>
+<div class="mt-unit-md space-y-unit-sm">
+<div class="bg-surface-container-lowest p-3 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider block mb-1">Defining Behavioral Signature</span>
+<p class="font-body-md text-body-md text-on-surface">
+                  Disproportionately top-tier ARR ($400k+), but <strong class="text-error font-medium">low weekly active user density (<24%)</strong>, prolonged admin inactivity gaps (>21 days), and recurrent Sev-1 support tickets initiated by only 1-2 executive sponsors.
+                </p>
+</div>
+<div class="p-3 bg-surface-container-high/40 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider block mb-1">Business Meaning & Vulnerability</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  High-profile churn candidates hiding behind large top-line spend. The broader enterprise workforce never absorbed the product organically into everyday operations. At extreme risk during vendor consolidation cycles.
+                </p>
+</div>
+</div>
+</div>
+<!-- Strategic Directive Strip -->
+<div class="bg-error-container/20 p-unit-md rounded flex items-start gap-unit-sm">
+<span class="material-symbols-outlined text-error text-xl flex-shrink-0 mt-0.5">priority_high</span>
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-error uppercase font-medium">Strategic Directive</span>
+<span class="font-body-sm text-body-sm text-on-surface">Immediately dispatch dedicated Forward-Deploy Technical Leads for in-person workflow rebuilds; orchestrate Executive Business Review with newly appointed VP Stakeholders.</span>
+</div>
+</div>
+</div>
+<!-- Right: Telemetry Metrics & Visual Telemetry (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-unit-md rounded flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-unit-sm">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Telemetry Diagnostics</span>
+<span class="font-label-mono text-caption text-error flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Health 52/100 (At-Risk)
+              </span>
+</div>
+<!-- Quantitative Quad Grid -->
+<div class="grid grid-cols-2 gap-unit-sm mt-unit-xs">
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">Accounts / Share</span>
+<span class="font-metric-md text-metric-md text-on-surface block mt-1">42 <span class="font-caption text-caption text-on-surface-variant">(2.9%)</span></span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">ARR Contribution</span>
+<span class="font-metric-md text-metric-md text-error block mt-1">$16.8M <span class="font-caption text-caption text-on-surface-variant">(14.8%)</span></span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">Avg Contract Value</span>
+<span class="font-metric-md text-metric-md text-on-surface block mt-1">$400.0k<span class="font-caption text-caption text-on-surface-variant">/yr</span></span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">Churn Probability</span>
+<span class="font-metric-md text-metric-md text-error block mt-1">38.4% <span class="font-caption text-caption text-on-surface-variant font-normal">P(90d)</span></span>
+</div>
+</div>
+<!-- Churn Risk Heatstrip Segment -->
+<div class="mt-4">
+<div class="flex justify-between font-label-mono text-caption text-on-surface-variant mb-1">
+<span>Vector Stability Index</span>
+<span class="text-error font-medium">Critical Drift Alert</span>
+</div>
+<div class="flex gap-1 w-full h-1.5">
+<div class="flex-1 bg-error rounded-sm"></div>
+<div class="flex-1 bg-error rounded-sm"></div>
+<div class="flex-1 bg-error rounded-sm"></div>
+<div class="flex-1 bg-error rounded-sm"></div>
+<div class="flex-1 bg-primary-container rounded-sm"></div>
+<div class="flex-1 bg-primary-container rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+</div>
+</div>
+</div>
+<!-- Quick Action Drawer trigger -->
+<div class="pt-3 mt-3 flex items-center justify-between">
+<span class="font-caption text-caption text-on-surface-variant font-label-mono">Cohort Tag: #GIANT_FRAGILE</span>
+<button class="font-body-sm text-body-sm text-error hover:text-error-container flex items-center gap-1 font-medium">
+<span>Initiate Intervention</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- DOSSIER 3: Autonomous Growth Champions -->
+<article class="bg-surface-container-low rounded p-unit-lg shadow-sm transition-all hover:bg-surface-container">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-xl">
+<!-- Left: Behavioral Archetype & Qualitative Meaning (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col justify-between space-y-unit-md">
+<div>
+<div class="flex flex-wrap items-center gap-unit-sm mb-unit-xs">
+<span class="font-label-mono text-caption px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-medium">CLUSTER 03</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Autonomous Growth Champions</h2>
+<span class="font-label-mono text-caption px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-medium">Expansion Powerhouse</span>
+</div>
+<div class="mt-unit-md space-y-unit-sm">
+<div class="bg-surface-container-lowest p-3 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider block mb-1">Defining Behavioral Signature</span>
+<p class="font-body-md text-body-md text-on-surface">
+                  Organic seat additions <strong class="text-tertiary font-medium">>15% per calendar quarter</strong>, intensive organic trial of newly pushed features without support interventions, and zero reported P1/P2 tickets over 180 consecutive days.
+                </p>
+</div>
+<div class="p-3 bg-surface-container-high/40 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider block mb-1">Business Meaning & Trajectory</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Pure product-led efficiency. The product solves their domain problems with near-frictionless UX ergonomics. Rapidly converting from mid-market deals to six-figure ARR without standard sales friction.
+                </p>
+</div>
+</div>
+</div>
+<!-- Strategic Directive Strip -->
+<div class="bg-surface-container-highest/60 p-unit-md rounded flex items-start gap-unit-sm">
+<span class="material-symbols-outlined text-tertiary text-xl flex-shrink-0 mt-0.5">auto_awesome</span>
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-tertiary uppercase font-medium">Strategic Directive</span>
+<span class="font-body-sm text-body-sm text-on-surface">Enable in-app self-service automated seat provisioning tiers; roll out tailored algorithmic add-on bundles directly to department champions.</span>
+</div>
+</div>
+</div>
+<!-- Right: Telemetry Metrics & Visual Telemetry (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-unit-md rounded flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-unit-sm">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Telemetry Diagnostics</span>
+<span class="font-label-mono text-caption text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Health 92/100
+              </span>
+</div>
+<!-- Quantitative Quad Grid -->
+<div class="grid grid-cols-2 gap-unit-sm mt-unit-xs">
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">Accounts / Share</span>
+<span class="font-metric-md text-metric-md text-on-surface block mt-1">312 <span class="font-caption text-caption text-on-surface-variant">(21.8%)</span></span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">ARR Contribution</span>
+<span class="font-metric-md text-metric-md text-on-surface block mt-1">$24.8M <span class="font-caption text-caption text-on-surface-variant">(21.9%)</span></span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">Avg Contract Value</span>
+<span class="font-metric-md text-metric-md text-on-surface block mt-1">$79.5k<span class="font-caption text-caption text-on-surface-variant">/yr</span></span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">Churn Probability</span>
+<span class="font-metric-md text-metric-md text-tertiary block mt-1">3.1% <span class="font-caption text-caption text-on-surface-variant font-normal">P(90d)</span></span>
+</div>
+</div>
+<!-- Churn Risk Heatstrip Segment -->
+<div class="mt-4">
+<div class="flex justify-between font-label-mono text-caption text-on-surface-variant mb-1">
+<span>Vector Stability Index</span>
+<span class="text-tertiary">Consistent Acceleration</span>
+</div>
+<div class="flex gap-1 w-full h-1.5">
+<div class="flex-1 bg-tertiary rounded-sm"></div>
+<div class="flex-1 bg-tertiary rounded-sm"></div>
+<div class="flex-1 bg-tertiary rounded-sm"></div>
+<div class="flex-1 bg-tertiary rounded-sm"></div>
+<div class="flex-1 bg-tertiary rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+</div>
+</div>
+</div>
+<!-- Quick Action Drawer trigger -->
+<div class="pt-3 mt-3 flex items-center justify-between">
+<span class="font-caption text-caption text-on-surface-variant font-label-mono">Cohort Tag: #CHAMPION_PLG</span>
+<button class="font-body-sm text-body-sm text-primary hover:text-primary-fixed flex items-center gap-1">
+<span>Inspect Cohort</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- DOSSIER 4: Under-Adopted Legacy Cohort -->
+<article class="bg-surface-container-low rounded p-unit-lg shadow-sm transition-all hover:bg-surface-container">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-xl">
+<!-- Left: Behavioral Archetype & Qualitative Meaning (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col justify-between space-y-unit-md">
+<div>
+<div class="flex flex-wrap items-center gap-unit-sm mb-unit-xs">
+<span class="font-label-mono text-caption px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-medium">CLUSTER 04</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Under-Adopted Legacy Cohort</h2>
+<span class="font-label-mono text-caption px-2 py-0.5 rounded bg-outline-variant/30 text-primary font-medium">Silent Attrition</span>
+</div>
+<div class="mt-unit-md space-y-unit-sm">
+<div class="bg-surface-container-lowest p-3 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider block mb-1">Defining Behavioral Signature</span>
+<p class="font-body-md text-body-md text-on-surface">
+                  Daily product interactions siloed to <strong class="text-on-surface font-medium">a single deprecated reporting tool</strong>, zero administrator authentication across >30 days, and contract expiration approaching in <90 days.
+                </p>
+</div>
+<div class="p-3 bg-surface-container-high/40 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider block mb-1">Business Meaning & Attrition State</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Silent departures. Customers who checked out psychologically 6 months ago and are merely waiting for annual renewal notifications to trigger cancellation or downgrades to open-source competitors.
+                </p>
+</div>
+</div>
+</div>
+<!-- Strategic Directive Strip -->
+<div class="bg-surface-container-highest/60 p-unit-md rounded flex items-start gap-unit-sm">
+<span class="material-symbols-outlined text-primary-container text-xl flex-shrink-0 mt-0.5">published_with_changes</span>
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-primary uppercase font-medium">Strategic Directive</span>
+<span class="font-body-sm text-body-sm text-on-surface">Mandate migration review sprint with specialized customer engineering; showcase modern automated workflows before renewal invoices are issued.</span>
+</div>
+</div>
+</div>
+<!-- Right: Telemetry Metrics & Visual Telemetry (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-unit-md rounded flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-unit-sm">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Telemetry Diagnostics</span>
+<span class="font-label-mono text-caption text-error flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Health 41/100 (Decaying)
+              </span>
+</div>
+<!-- Quantitative Quad Grid -->
+<div class="grid grid-cols-2 gap-unit-sm mt-unit-xs">
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">Accounts / Share</span>
+<span class="font-metric-md text-metric-md text-on-surface block mt-1">198 <span class="font-caption text-caption text-on-surface-variant">(13.8%)</span></span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">ARR Contribution</span>
+<span class="font-metric-md text-metric-md text-on-surface block mt-1">$12.4M <span class="font-caption text-caption text-on-surface-variant">(11.0%)</span></span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">Avg Contract Value</span>
+<span class="font-metric-md text-metric-md text-on-surface block mt-1">$62.6k<span class="font-caption text-caption text-on-surface-variant">/yr</span></span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">Churn Probability</span>
+<span class="font-metric-md text-metric-md text-error block mt-1">46.2% <span class="font-caption text-caption text-on-surface-variant font-normal">P(90d)</span></span>
+</div>
+</div>
+<!-- Churn Risk Heatstrip Segment -->
+<div class="mt-4">
+<div class="flex justify-between font-label-mono text-caption text-on-surface-variant mb-1">
+<span>Vector Stability Index</span>
+<span class="text-error">High Probability Drop</span>
+</div>
+<div class="flex gap-1 w-full h-1.5">
+<div class="flex-1 bg-error rounded-sm"></div>
+<div class="flex-1 bg-error rounded-sm"></div>
+<div class="flex-1 bg-error rounded-sm"></div>
+<div class="flex-1 bg-error rounded-sm"></div>
+<div class="flex-1 bg-error rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+</div>
+</div>
+</div>
+<!-- Quick Action Drawer trigger -->
+<div class="pt-3 mt-3 flex items-center justify-between">
+<span class="font-caption text-caption text-on-surface-variant font-label-mono">Cohort Tag: #LEGACY_AT_RISK</span>
+<button class="font-body-sm text-body-sm text-primary hover:text-primary-fixed flex items-center gap-1">
+<span>Inspect Cohort</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- DOSSIER 5: Velocity Mid-Market -->
+<article class="bg-surface-container-low rounded p-unit-lg shadow-sm transition-all hover:bg-surface-container">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-xl">
+<!-- Left: Behavioral Archetype & Qualitative Meaning (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col justify-between space-y-unit-md">
+<div>
+<div class="flex flex-wrap items-center gap-unit-sm mb-unit-xs">
+<span class="font-label-mono text-caption px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-medium">CLUSTER 05</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Velocity Mid-Market</h2>
+<span class="font-label-mono text-caption px-2 py-0.5 rounded bg-secondary-container/20 text-secondary font-medium">Volume Baseline</span>
+</div>
+<div class="mt-unit-md space-y-unit-sm">
+<div class="bg-surface-container-lowest p-3 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider block mb-1">Defining Behavioral Signature</span>
+<p class="font-body-md text-body-md text-on-surface">
+                  Predictable quarterly rhythm, standard daily dashboard browsing, strict license compliance with low support ticket volume (<1 per quarter per 10 active seats).
+                </p>
+</div>
+<div class="p-3 bg-surface-container-high/40 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider block mb-1">Business Meaning & Cash Flow Role</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  The dependable recurring revenue bedrock. Highly resilient, minimal CS maintenance cost per dollar ARR, yielding consistent 104% net retention with minor upside potential.
+                </p>
+</div>
+</div>
+</div>
+<!-- Strategic Directive Strip -->
+<div class="bg-surface-container-highest/60 p-unit-md rounded flex items-start gap-unit-sm">
+<span class="material-symbols-outlined text-secondary text-xl flex-shrink-0 mt-0.5">devices</span>
+<div class="flex flex-col">
+<span class="font-label-mono text-caption text-secondary uppercase font-medium">Strategic Directive</span>
+<span class="font-body-sm text-body-sm text-on-surface">Deploy programmatic digital CS cadence; auto-trigger quarterly performance intelligence summaries to protect retention with zero human headcount drag.</span>
+</div>
+</div>
+</div>
+<!-- Right: Telemetry Metrics & Visual Telemetry (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-unit-md rounded flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-unit-sm">
+<span class="font-label-mono text-caption text-on-surface-variant uppercase">Telemetry Diagnostics</span>
+<span class="font-label-mono text-caption text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Health 84/100 (Stable)
+              </span>
+</div>
+<!-- Quantitative Quad Grid -->
+<div class="grid grid-cols-2 gap-unit-sm mt-unit-xs">
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">Accounts / Share</span>
+<span class="font-metric-md text-metric-md text-on-surface block mt-1">684 <span class="font-caption text-caption text-on-surface-variant">(47.8%)</span></span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">ARR Contribution</span>
+<span class="font-metric-md text-metric-md text-on-surface block mt-1">$16.6M <span class="font-caption text-caption text-on-surface-variant">(14.7%)</span></span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">Avg Contract Value</span>
+<span class="font-metric-md text-metric-md text-on-surface block mt-1">$24.2k<span class="font-caption text-caption text-on-surface-variant">/yr</span></span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded">
+<span class="font-label-mono text-caption text-on-surface-variant block">Churn Probability</span>
+<span class="font-metric-md text-metric-md text-on-surface block mt-1">8.7% <span class="font-caption text-caption text-on-surface-variant font-normal">P(90d)</span></span>
+</div>
+</div>
+<!-- Churn Risk Heatstrip Segment -->
+<div class="mt-4">
+<div class="flex justify-between font-label-mono text-caption text-on-surface-variant mb-1">
+<span>Vector Stability Index</span>
+<span class="text-on-surface">Predictable Base</span>
+</div>
+<div class="flex gap-1 w-full h-1.5">
+<div class="flex-1 bg-tertiary rounded-sm"></div>
+<div class="flex-1 bg-tertiary rounded-sm"></div>
+<div class="flex-1 bg-tertiary rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+</div>
+</div>
+</div>
+<!-- Quick Action Drawer trigger -->
+<div class="pt-3 mt-3 flex items-center justify-between">
+<span class="font-caption text-caption text-on-surface-variant font-label-mono">Cohort Tag: #MID_RUNNER</span>
+<button class="font-body-sm text-body-sm text-primary hover:text-primary-fixed flex items-center gap-1">
+<span>Inspect Cohort</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Comparative Segment Telemetry Matrix -->
+<section class="bg-surface-container-low rounded p-unit-base shadow-sm space-y-unit-md mt-unit-base">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Comparative Segment Matrix</h3>
+<p class="font-caption text-caption text-on-surface-variant">Cross-vector telemetry benchmarking and relative risk attribution</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-mono text-caption text-on-surface-variant">Format: Metric Mean</span>
+<button class="h-7 px-2.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-mono text-caption flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-xs">download</span> CSV
+        </button>
+</div>
+</div>
+<!-- Table Canvas -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-lowest h-9 font-label-mono text-caption text-on-surface-variant">
+<th class="px-unit-base font-medium">Cluster Identifier</th>
+<th class="px-unit-base font-medium text-right">Avg ARR</th>
+<th class="px-unit-base font-medium text-right">Churn Risk</th>
+<th class="px-unit-base font-medium text-right">Expansion Velocity</th>
+<th class="px-unit-base font-medium text-right">Feature Depth</th>
+<th class="px-unit-base font-medium text-right">Support Load</th>
+<th class="px-unit-base font-medium text-right">90D Renewal Volume</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-md">
+<tr class="h-11 hover:bg-surface-container transition-colors">
+<td class="px-unit-base font-medium flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Enterprise Deep Integrators</span>
+</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">$231.5k</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm text-tertiary">1.2%</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm text-tertiary">+22.4%</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">9.4 / 10</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">0.4 tix/mo</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">$14.2M (28 accts)</td>
+</tr>
+<tr class="h-11 hover:bg-surface-container transition-colors bg-error/5">
+<td class="px-unit-base font-medium flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>High-Touch Fragile Giants</span>
+</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm text-error">$400.0k</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm text-error font-semibold">38.4%</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm text-on-surface-variant">-1.2%</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">2.8 / 10</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm text-error font-medium">8.6 tix/mo</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm text-error">$8.4M (12 accts)</td>
+</tr>
+<tr class="h-11 hover:bg-surface-container transition-colors">
+<td class="px-unit-base font-medium flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Autonomous Growth Champions</span>
+</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">$79.5k</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm text-tertiary">3.1%</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm text-tertiary font-semibold">+34.8%</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">7.6 / 10</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">0.1 tix/mo</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">$6.8M (64 accts)</td>
+</tr>
+<tr class="h-11 hover:bg-surface-container transition-colors">
+<td class="px-unit-base font-medium flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span>Under-Adopted Legacy Cohort</span>
+</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">$62.6k</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm text-error font-semibold">46.2%</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm text-error">-14.6%</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">1.1 / 10</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">0.2 tix/mo</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm text-error">$5.2M (44 accts)</td>
+</tr>
+<tr class="h-11 hover:bg-surface-container transition-colors">
+<td class="px-unit-base font-medium flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span>Velocity Mid-Market</span>
+</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">$24.2k</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">8.7%</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm text-on-surface">+4.1%</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">4.3 / 10</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">1.1 tix/mo</td>
+<td class="px-unit-base text-right font-metric-sm text-metric-sm">$3.8M (132 accts)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    const btn = document.getElementById('recalcBtn');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        const icon = this.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.classList.add('animate-spin');
+          setTimeout(() => {
+            icon.classList.remove('animate-spin');
+          }, 1200);
+        }
+      });
+    }
+  })();
+</script></main></div></body></html>
