@@ -1,0 +1,21 @@
+# generated artifacts (AGENTS.md convention)
+data/processed/*
+data/raw/*
+models/*
+!data/processed/.gitkeep
+!data/raw/.gitkeep
+!models/.gitkeep
+
+# orchestrator runtime state
+orchestrator/runtime/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# scratch & cache
+.commandcode/
+.pytest_cache/
+scratch_*
+*.log
