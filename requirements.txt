@@ -1,12 +1,23 @@
-pandas>=2.0.0
-numpy>=1.24.0
-scikit-learn>=1.3.0
-shap>=0.42.0
-joblib>=1.3.0
-fastapi>=0.100.0
-uvicorn>=0.23.0
-pydantic>=2.0.0
-streamlit>=1.28.0
-plotly>=5.17.0
-pytest>=7.4.0
-requests>=2.31.0
+# Runtime dependencies for the Telecom Customer Intelligence Platform (v2).
+# Pinned to the exact versions verified locally on Python 3.13 (AGENTS.md
+# stack), so a clean cloud checkout reproduces the same pipeline artifacts
+# and dashboard. One file serves every deployment target: the pipeline
+# (src/), the FastAPI service (Render) and the Streamlit dashboard
+# (Streamlit Community Cloud).
+#
+# NOTE: exact pins matter here — the app uses the st.navigation / st.Page
+# page-API (streamlit >= 1.36) and shap's TreeExplainer path, both of which
+# change behavior across minor releases. The versions below are the tested set.
+pandas==2.3.3
+numpy==2.4.4
+scikit-learn==1.8.0
+shap==0.51.0
+joblib==1.5.3
+fastapi==0.136.1
+uvicorn==0.46.0
+pydantic==2.13.3
+streamlit==1.57.0
+plotly==6.7.0
+
+# test suite (pytest runs the sanity gates; not used at runtime)
+pytest==9.1.1

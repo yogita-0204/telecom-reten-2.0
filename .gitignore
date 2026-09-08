@@ -1,10 +1,32 @@
-# generated artifacts (AGENTS.md convention)
+# ---------------------------------------------------------------------------
+# Generated artifacts (AGENTS.md convention) — NOT committed. The pipeline
+# regenerates them deterministically (seed 42) from the raw CSV, and the
+# deployed apps (Streamlit dashboard / Render API) bootstrap them on first
+# launch from a clean checkout. models/clv_model.pkl alone is ~51 MB, which
+# also rules out committing model files.
+# ---------------------------------------------------------------------------
 data/processed/*
-data/raw/*
 models/*
 !data/processed/.gitkeep
-!data/raw/.gitkeep
 !models/.gitkeep
+
+# ---------------------------------------------------------------------------
+# Raw dataset — deliberately COMMITTED (override of the data/raw/* blanket
+# ignore). PRD.md Section 7 requires "pipeline runs top-to-bottom with zero
+# errors on a clean checkout", and Streamlit/Render cold starts rely on this
+# file being present to regenerate every artifact. The .gitkeep rule keeps
+# the directory structure for the regenerated artifacts.
+# ---------------------------------------------------------------------------
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/telecom_customer_churn.csv
+
+# Stray root-level copies of the raw data — the canonical copy lives at
+# data/raw/telecom_customer_churn.csv; these Desktop leftovers are not part
+# of the repo.
+/telecom_customer_churn.csv
+/telecom_data_dictionary.csv
+/telecom_zipcode_population.csv
 
 # orchestrator runtime state
 orchestrator/runtime/
