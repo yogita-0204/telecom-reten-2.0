@@ -1,0 +1,24 @@
+# Render Blueprint — Telecom Customer Intelligence Platform API
+#
+# One-click deployment from the Render dashboard: connect the GitHub repo
+# (yogita-0204/telecom-reten-2.0) and Render applies this file -> the web
+# service is created with the exact build/start commands below.
+#
+# The service regenerates pipeline artifacts from the committed raw CSV on
+# first request (/predict triggers src.run_pipeline once; /health stays
+# artifact-free for probes), so no build step beyond pip install is needed.
+
+services:
+  - type: web
+    name: telecom-reten-2-0
+    runtime: python
+    plan: free
+    autoDeploy: true
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.13"
+      - key: PIP_NO_CACHE_DIR
+        value: "1"
