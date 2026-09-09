@@ -4,9 +4,11 @@
 # (yogita-0204/telecom-reten-2.0) and Render applies this file -> the web
 # service is created with the exact build/start commands below.
 #
-# The service regenerates pipeline artifacts from the committed raw CSV on
-# first request (/predict triggers src.run_pipeline once; /health stays
-# artifact-free for probes), so no build step beyond pip install is needed.
+# The pipeline artifacts (data/processed/*, models/*) are baked into the
+# image at BUILD time (build instances have far more memory than the 512 MB
+# free runtime, so random-forest + SHAP training is safe there). At runtime
+# /predict loads them immediately — the on-demand bootstrap in api/main.py
+# is only a fallback for a fresh checkout.
 
 services:
   - type: web
@@ -14,7 +16,7 @@ services:
     runtime: python
     plan: free
     autoDeploy: true
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r requirements.txt && python -m src.run_pipeline
     startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
     envVars:

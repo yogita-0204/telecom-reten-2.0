@@ -386,18 +386,18 @@ def generate_shap_summary(
         shap_values = shap_values[..., 1]
     if (
         getattr(shap_values, "ndim", 1) != 2
-        or shap_values.shape[0] != X_test.shape[0]
-        or shap_values.shape[1] != X_test.shape[1]
+        or shap_values.shape[0] != X_shap.shape[0]
+        or shap_values.shape[1] != X_shap.shape[1]
     ):
         raise ValueError(
             f"Unexpected SHAP values shape {getattr(shap_values, 'shape', None)} "
-            f"for X_test {X_test.shape}"
+            f"for X_shap {X_shap.shape}"
         )
 
     shap.summary_plot(
         shap_values,
-        X_test,
-        feature_names=list(X_test.columns),
+        X_shap,
+        feature_names=list(X_shap.columns),
         show=False,
     )
     plt.savefig(SHAP_SUMMARY_PATH, bbox_inches="tight", dpi=150)
