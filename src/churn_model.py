@@ -360,10 +360,21 @@ def generate_shap_summary(
     SHAP's TreeExplainer computes *exact, model-consistent* Shapley values in
     a single pass (the path-dependent method needs no background dataset and
     no sampling); KernelExplainer would only approximate the same numbers at
-    far greater cost, so it is deliberately not used.
+    far greater cost, so it is deliberately not used. The held-out set is
+    sampled down to a fixed 2,000 rows first: a global summary plot is
+    statistically stable at that size, and it keeps peak SHAP memory ~4x
+    lower — important on free-tier instances where the pipeline regenerates
+    artifacts on first launch (Render/Streamlit bootstrap).
     """
+    # Deterministic sample of the held-out set for the SHAP computation
+    # (explained in the docstring; seed matches the repo-wide seed 42 rule).
+    rng = np.random.default_rng(42)
+    n_shap = min(2000, X_test.shape[0])
+    sample_idx = rng.choice(X_test.shape[0], size=n_shap, replace=False)
+    X_shap = X_test.iloc[sample_idx]
+
     explainer = shap.TreeExplainer(rf_model)
-    shap_values = explainer.shap_values(X_test)
+    shap_values = explainer.shap_values(X_shap)
 
     # Shape guard for portability across SHAP versions: binary classifiers may
     # return a list of per-class arrays (older shap) or a single array whose
