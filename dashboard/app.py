@@ -46,24 +46,24 @@ _lib.inject_css()
 
 
 # ---------------------------------------------------------------------------
-# First-launch bootstrap (deployment): regenerate artifacts on a clean checkout
+# First-launch bootstrap (deployment safety net): regenerate artifacts when the
+# checkout has none.
 # ---------------------------------------------------------------------------
-# The repo intentionally ships without generated artifacts (data/processed/*,
-# models/* — AGENTS.md convention), so a fresh Streamlit Community Cloud clone
-# contains only data/raw/telecom_customer_churn.csv. Running the pipeline once
-# here makes the dashboard fully functional straight from a clean checkout —
-# the same guarantee PRD.md Section 7 spells out for a clean clone. The
-# resource cache keeps this to exactly once per app process; free-tier cold
-# starts re-run it, which is the documented trade-off.
+# Pipeline artifacts are committed (see .gitignore), so a deployed clone is
+# ready instantly. This bootstrap only fires for a checkout that deliberately
+# removed them — the same guarantee PRD.md Section 7 spells out for a clean
+# clone ("pipeline runs top-to-bottom with zero errors"). Running the full
+# pipeline inside a cold container takes minutes, which is exactly why the
+# artifacts ship with the repo. The resource cache keeps it to once per app
+# process when it does run.
 @st.cache_resource(show_spinner="First launch: running the pipeline to generate artifacts...")
 def _bootstrap_artifacts() -> None:
     """Generate every pipeline artifact from the committed raw CSV if missing.
 
     Business reason: the dashboard is a pure reader of pipeline outputs, so a
-    missing artifact otherwise turns the pages into an error screen on a fresh
-    deploy. Regenerating deterministically (seed 42) from the committed raw
-    data instead of committing generated files keeps the repo lean while a
-    clean checkout still boots to real numbers.
+    missing artifact otherwise turns the pages into an error screen. Regenerating
+    deterministically (seed 42) from the committed raw data keeps a clean
+    checkout working even if the generated files were stripped.
     """
     missing = _lib.ensure_artifacts()
     if not missing:

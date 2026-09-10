@@ -329,9 +329,16 @@ def save_model(model: object, path: Path = MODEL_PATH) -> None:
     estimator as feature_names_in_, which keeps every later consumer honest
     without a second bookkeeping file. joblib is the project's agreed
     serialization format.
+
+    Compression (level 3) is used because this random forest's fully grown
+    trees serialize to ~49 MB uncompressed — 94% of every generated artifact
+    combined. The values are float64 leaf arrays and split thresholds, which
+    compress ~3-4x, and joblib.load transparently decompresses, so no
+    consumer changes. The smaller file keeps the deploy images, the
+    dashboard's first-launch bootstrap and any repo archive light.
     """
     path.parent.mkdir(parents=True, exist_ok=True)
-    joblib.dump(model, path)
+    joblib.dump(model, path, compress=3)
     print(
         f"[clv_model] saved {type(model).__name__} -> {path} "
         f"({len(model.feature_names_in_)} features)"

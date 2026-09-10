@@ -430,9 +430,12 @@ def save_model(model: object, path: Path = MODEL_PATH) -> None:
     format; sklearn records the fitted feature list on the estimator itself
     (feature_names_in_), which keeps the exact model input contract available
     to every later consumer without a second bookkeeping file.
+
+    Compression (level 3) keeps the serialized forest small; joblib.load
+    transparently decompresses, so no consumer changes.
     """
     path.parent.mkdir(parents=True, exist_ok=True)
-    joblib.dump(model, path)
+    joblib.dump(model, path, compress=3)
     print(
         f"[churn_model] saved {type(model).__name__} -> {path} "
         f"({len(model.feature_names_in_)} features)"

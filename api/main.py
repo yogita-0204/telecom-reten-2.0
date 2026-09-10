@@ -352,10 +352,11 @@ def _load_artifacts() -> dict:
     them per request would waste the majority of each call's latency for zero
     freshness — so they load lazily on first use and stay cached; the explicit
     lowercase artifact paths (MEMORY.md convention) keep the API aligned with
-    the pipeline's artifact contract. On a clean checkout the lazy loader
-    first bootstraps the artifacts from the committed raw CSV (see
-    _bootstrap_artifacts_if_needed), which is what makes a fresh Render
-    deploy functional without committing generated files.
+    the pipeline's artifact contract. Artifacts are committed, so a deployed
+    instance serves immediately; if a checkout has none, the lazy loader first
+    bootstraps them from the committed raw CSV (see
+    _bootstrap_artifacts_if_needed) so a fresh Render deploy stays functional
+    even without generated files.
     """
     if _artifacts:
         return _artifacts

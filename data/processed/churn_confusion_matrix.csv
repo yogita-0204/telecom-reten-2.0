@@ -1,0 +1,5 @@
+model,actual,predicted,count
+Logistic Regression,0,0,761
+Logistic Regression,0,1,183
+Logistic Regression,1,0,54
+Logistic Regression,1,1,320

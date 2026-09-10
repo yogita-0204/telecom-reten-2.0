@@ -1,0 +1,5 @@
+cluster,segment,customers,share,Tenure_in_Months_centroid,Monthly_Charge_centroid,Total_Services_centroid,tenure_level,spend_level,services_level
+0,Loyal Budget Customers,918,0.13034218372852477,54.26,26.0,1.93,High,Low,Low
+1,Loyal Premium Customers,2225,0.31591651284963795,57.28,89.48,7.48,High,High,High
+2,New Budget Customers,1371,0.1946613658952151,10.37,25.15,1.79,Low,Low,Low
+3,Established Standard Customers,2529,0.35907993752662215,14.49,75.32,4.98,Mid,Mid,Mid

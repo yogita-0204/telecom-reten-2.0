@@ -73,8 +73,8 @@ a live dashboard and API expose the results.
 ├── api/main.py          # FastAPI: GET /health, POST /predict
 ├── dashboard/           # Streamlit: Executive Overview + Customer Explorer (2 pages)
 ├── data/raw/            # telecom_customer_churn.csv (committed — clean-checkout contract)
-├── data/processed/      # pipeline artifacts (generated, gitignored)
-├── models/              # *.pkl (generated, gitignored)
+├── data/processed/      # pipeline artifacts (committed, regenerable at seed 42)
+├── models/              # *.pkl (committed, joblib-compressed; regenerable)
 ├── tests/               # 35 pytest sanity gates
 └── requirements.txt     # pinned deps (Python 3.13)
 ```
@@ -89,27 +89,28 @@ uvicorn api.main:app --reload         # API on :8000, docs at /docs
 streamlit run dashboard/app.py        # dashboard on :8501
 ```
 
-## Clean-checkout strategy
+## Artifacts & clean checkout
 
-The generated artifacts (`data/processed/*`, `models/*`) are **not** committed —
-`models/clv_model.pkl` alone is ~51 MB. Instead:
+Pipeline artifacts (`data/processed/*`, `models/*`) **are committed** — the
+model pickles are compressed with joblib level 3, so the whole set is ~14 MB
+(`clv_model.pkl` ~11 MB instead of ~49 MB). Two reasons:
 
-1. `data/raw/telecom_customer_churn.csv` **is** committed, so a clean clone can
-   re-run the whole pipeline (PRD §7 acceptance criterion).
-2. The dashboard bootstraps missing artifacts on first launch
-   (`dashboard/app.py` → `_bootstrap_artifacts`, cached once per app process).
-3. The API does the same on first `/predict` (`api/main.py` →
-   `_bootstrap_artifacts_if_needed`), while `/health` stays artifact-free for
-   probes.
+1. Both deployables serve instantly — no first-visitor pipeline run on a shared
+   free-tier CPU.
+2. The pipeline remains fully reproducible: `python -m src.run_pipeline` rebuilds
+   every artifact from the committed raw CSV at seed 42, and the tests assert the
+   committed pickles match the committed features.
 
-With the pipeline deterministic at seed 42, bootstrapped artifacts match a
-local run byte-for-byte.
+If the artifacts are ever stripped from a checkout, both apps regenerate them on
+first launch (`dashboard/app.py` → `_bootstrap_artifacts`, `api/main.py` →
+`_bootstrap_artifacts_if_needed`), so a clean clone still boots to real numbers.
 
 ## Deployment
 
 **Streamlit Community Cloud** (dashboard): sign in at share.streamlit.io with
 GitHub, *New app* → select `yogita-0204/telecom-reten-2.0`, branch `main`,
-main file `dashboard/app.py`.
+main file `dashboard/app.py`. The repo pins Python 3.13 (`.python-version` +
+`runtime.txt`) because the pinned dependencies have no 3.14 wheels yet.
 
 **Render** (API): sign in at render.com with GitHub, *New Web Service* →
 select the same repo, start command:

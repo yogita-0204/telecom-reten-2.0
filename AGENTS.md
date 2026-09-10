@@ -25,8 +25,8 @@ telecom-v2/
 ├── DECISIONS.md         # architecture-level decisions log
 ├── data/
 │   ├── raw/telecom_customer_churn.csv
-│   └── processed/       # generated artifacts (gitignored except .gitkeep)
-├── models/               # saved .pkl files (gitignored except .gitkeep)
+│   └── processed/       # pipeline artifacts (committed; regenerable at seed 42)
+├── models/               # saved .pkl files (committed, joblib level-3 compressed)
 ├── src/
 │   ├── feature_engineer.py
 │   ├── churn_model.py

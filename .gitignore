@@ -1,21 +1,21 @@
 # ---------------------------------------------------------------------------
-# Generated artifacts (AGENTS.md convention) — NOT committed. The pipeline
-# regenerates them deterministically (seed 42) from the raw CSV, and the
-# deployed apps (Streamlit dashboard / Render API) bootstrap them on first
-# launch from a clean checkout. models/clv_model.pkl alone is ~51 MB, which
-# also rules out committing model files.
+# Generated artifacts — COMMITTED on purpose.
+#
+# The pipeline regenerates everything deterministically (seed 42), and both
+# deployed apps can bootstrap from a clean checkout. They are still committed
+# because Streamlit Community Cloud's free containers are slow and sleep after
+# ~12h idle: a cold visitor would otherwise wait minutes while the full
+# pipeline (random forests + SHAP + KMeans) re-runs on a shared CPU, and
+# recruiters judge the project in under a minute (PRD user story 1).
+#
+# The weight is small now that model pickles are compressed at joblib level 3
+# (clv_model.pkl ~49 MB -> ~11 MB; all artifacts ~14 MB combined).
 # ---------------------------------------------------------------------------
-data/processed/*
-models/*
-!data/processed/.gitkeep
-!models/.gitkeep
 
 # ---------------------------------------------------------------------------
-# Raw dataset — deliberately COMMITTED (override of the data/raw/* blanket
-# ignore). PRD.md Section 7 requires "pipeline runs top-to-bottom with zero
-# errors on a clean checkout", and Streamlit/Render cold starts rely on this
-# file being present to regenerate every artifact. The .gitkeep rule keeps
-# the directory structure for the regenerated artifacts.
+# Raw dataset — deliberately COMMITTED. PRD.md Section 7 requires "pipeline
+# runs top-to-bottom with zero errors on a clean checkout", and the pipeline
+# reads this file to regenerate every artifact.
 # ---------------------------------------------------------------------------
 data/raw/*
 !data/raw/.gitkeep
