@@ -33,7 +33,7 @@ a live dashboard and API expose the results.
 |---|---|---|
 | Churn prediction | Logistic Regression (scaled pipeline) vs Random Forest, `class_weight='balanced'` | **Deployed LR: ROC-AUC 0.9186, Recall 0.8556, F1 0.7298** (RF: ROC-AUC 0.9072, F1 0.7132) |
 | Customer value (CLV) | RandomForestRegressor on total revenue | **RMSE $136.56 · MAE $89.51 · R² 0.9976** |
-| Segmentation | StandardScaler + KMeans (k=4, elbow + silhouette 0.4176) | 4 named segments, 0–2,529 customers each |
+| Segmentation | StandardScaler + KMeans (k=4, elbow + silhouette 0.4249) | 4 named segments, 0–2,529 customers each |
 | Retention priority | 2×2 median rule (churn prob × predicted CLV) | 7,043/7,043 labeled, 0 nulls |
 
 ### Business summary (from `python -m src.run_pipeline`)
@@ -60,7 +60,7 @@ a live dashboard and API expose the results.
 |---|---|
 | **Logistic Regression + Random Forest** (`class_weight='balanced'`, default hyperparameters) | Binary churn is a classification problem; two standard models with a comparison table are fully explainable in an interview. `class_weight='balanced'` handles the 28% churn rate without SMOTE, keeping training data unchanged and easy to explain. LR is wrapped in a `StandardScaler` pipeline (MEMORY.md: raw-scale LR does not converge). |
 | **RandomForestRegressor for CLV** | Predicts total revenue directly; SHAP/feature importance (tenure 0.39, tenure months 0.32, monthly charge 0.21) make every dollar traceable, unlike probabilistic BG/NBD. |
-| **K-Means k=4** (elbow + silhouette sweep, k=2–8) | Silhouette peaks at k=3; k=4 is the best ≥4 and matches the PRD's four business segments; every customer gets exactly one named cluster. |
+| **K-Means k=4** (elbow + silhouette sweep, k=2–8) | Silhouette peaks at k=4 (0.4249, scored on a fixed 2,000-customer sample) and the elbow bends around k=4 — the data and the PRD's four business segments agree; every customer gets exactly one named cluster. |
 | **Rule-based 2×2 priority matrix** | A transparent median-threshold rule (churn prob ≥ 0.3075, predicted CLV ≥ $2,117.54) yields deterministic, exhaustive labels — honest where uplift models would need simulated treatment data. |
 | **SHAP TreeExplainer** | Global summary plot on the Random Forest makes feature contributions visible per prediction. |
 

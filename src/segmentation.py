@@ -112,7 +112,18 @@ def evaluate_k_values(
     -1..+1 scale where business-meaningful groupings live above ~0.25. Both
     are computed on the same standardized features the final model uses, each
     k fitted with the agreed random_state so the sweep is reproducible.
+
+    The silhouette is scored on a fixed 2,000-customer sample (same
+    random_state): the metric computes all pairwise distances, so the full
+    7,043-row score costs O(n^2) per k — at cloud/CI CPU speeds the sample
+    keeps the identical ranking while making first-launch bootstraps
+    (Streamlit Cloud, Render build) several times faster. Inertia stays on
+    the full data — it is O(n) and the elbow curve is the finer instrument.
     """
+    rng = np.random.default_rng(RANDOM_STATE)
+    n_sil = min(2000, X_scaled.shape[0])
+    sil_idx = rng.choice(X_scaled.shape[0], size=n_sil, replace=False)
+
     rows = []
     for k in range(K_MIN, K_MAX + 1):
         km = KMeans(n_clusters=k, n_init=10, random_state=RANDOM_STATE)
@@ -121,7 +132,9 @@ def evaluate_k_values(
             {
                 "k": k,
                 "inertia": float(km.inertia_),
-                "silhouette": float(silhouette_score(X_scaled, km.labels_)),
+                "silhouette": float(
+                    silhouette_score(X_scaled[sil_idx], km.labels_[sil_idx])
+                ),
             }
         )
     evaluation = pd.DataFrame(rows)
