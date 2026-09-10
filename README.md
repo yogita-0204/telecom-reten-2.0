@@ -109,8 +109,13 @@ first launch (`dashboard/app.py` → `_bootstrap_artifacts`, `api/main.py` →
 
 **Streamlit Community Cloud** (dashboard): sign in at share.streamlit.io with
 GitHub, *New app* → select `yogita-0204/telecom-reten-2.0`, branch `main`,
-main file `dashboard/app.py`. The repo pins Python 3.13 (`.python-version` +
-`runtime.txt`) because the pinned dependencies have no 3.14 wheels yet.
+main file `dashboard/app.py`.
+
+> **Python version note:** Community Cloud currently forces Python 3.14 on new
+> deploys and ignores `runtime.txt` / `.python-version`
+> ([streamlit#15326](https://github.com/streamlit/streamlit/issues/15326)).
+> Every dependency is therefore pinned to a release that publishes Linux cp314
+> wheels, so the app builds on 3.13 and 3.14 alike.
 
 **Render** (API): sign in at render.com with GitHub, *New Web Service* →
 select the same repo, start command:

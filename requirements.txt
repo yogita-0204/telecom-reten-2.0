@@ -8,11 +8,18 @@
 # NOTE: exact pins matter here — the app uses the st.navigation / st.Page
 # page-API (streamlit >= 1.36) and shap's TreeExplainer path, both of which
 # change behavior across minor releases. The versions below are the tested set.
+#
+# Streamlit Community Cloud currently forces Python 3.14 on new deploys
+# (runtime.txt / .python-version are ignored by the platform — see
+# github.com/streamlit/streamlit/issues/15326). Every pin below therefore
+# publishes Linux cp314 wheels; matplotlib 3.10.3 did not, which silently
+# aborted the whole uv install and broke the app with ModuleNotFoundError.
+# matplotlib 3.10.9 is the same minor line with cp314 wheels available.
 pandas==2.3.3
 numpy==2.4.4
 scikit-learn==1.8.0
 shap==0.51.0
-matplotlib==3.10.3
+matplotlib==3.10.9
 joblib==1.5.3
 fastapi==0.136.1
 uvicorn==0.46.0
