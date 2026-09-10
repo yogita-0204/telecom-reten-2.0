@@ -14,16 +14,16 @@ a live dashboard and API expose the results.
 
 | Service | URL | Status |
 |---|---|---|
-| Streamlit dashboard (Executive Overview + Customer Explorer) | **https://telecom-reten-2-0.streamlit.app** | Deployment pending GitHub/Streamlit sign-in — see [Deployment](#deployment) |
-| FastAPI service (`/health`, `/predict`) on Render | **https://telecom-reten-2-0.onrender.com** | Deployment pending GitHub/Render sign-in — see [Deployment](#deployment) |
+| Streamlit dashboard (Executive Overview + Customer Explorer) | **https://telecom-reten-2-0.streamlit.app** | Live — 2 pages, real data |
+| FastAPI service (`/health`, `/predict`) on Render | **https://telecom-reten-2-0.onrender.com** | Live — `/predict` verified |
 | Source repository | https://github.com/yogita-0204/telecom-reten-2.0 | Public |
 
 > **Expected free-tier behavior (not a bug):** Streamlit Community Cloud apps
-> sleep after ~12 hours idle and cold-start on the next visit; Render free
-> services cold-start 1–2 minutes on first request after idling. On a fresh
-> checkout both deployables regenerate artifacts from the committed raw CSV on
-> first launch (see *Clean-checkout strategy* below), so the first request can
-> take a few minutes.
+> sleep after ~12 hours idle — the first visit shows a *"Yes, get this app back
+> up!"* button and takes ~30 s to wake. Render free services cold-start 1–2
+> minutes on the first request after idling. Pipeline artifacts ship with the
+> repo (see *Artifacts & clean checkout*), so no request ever has to wait for
+> model training.
 
 ---
 
@@ -124,10 +124,9 @@ select the same repo, start command:
 uvicorn api.main:app --host 0.0.0.0 --port $PORT
 ```
 
-**Fallback (AGENTS.md):** if the Render setup stalls before the deadline, the
-dashboard already computes everything from local artifacts — it never depends
-on the API — so the Streamlit app alone remains fully functional; the API stays
-built and locally tested, deployment pending.
+**Fallback (AGENTS.md):** the dashboard never depends on the API — it reads the
+same committed artifacts directly — so even if the Render service is asleep or
+unreachable, the Streamlit app alone stays fully functional.
 
 ---
 
