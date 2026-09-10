@@ -40,13 +40,6 @@ from __future__ import annotations
 from pathlib import Path
 
 import joblib
-import matplotlib
-
-# Headless-safe backend chosen before pyplot import: the pipeline and tests
-# run on servers/CI without a display, and Agg renders PNGs just as well.
-matplotlib.use("Agg")
-
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
@@ -282,7 +275,17 @@ def generate_feature_importance(
     RandomForestRegressor's feature_importances_ are the mean decrease in
     impurity (variance for regression) across all trees — a built-in,
     model-consistent ranking that needs no separate explainer library.
+
+    matplotlib is imported here rather than at module scope so the serving
+    path (api/main.py imports this module) never pays for a GUI/plotting
+    stack — matplotlib alone adds ~150 MB to the process, which matters on
+    free-tier instances.
     """
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
     importances = pd.DataFrame(
         {
             "feature": list(X.columns),

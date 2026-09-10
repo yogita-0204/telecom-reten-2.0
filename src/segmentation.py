@@ -41,13 +41,6 @@ from __future__ import annotations
 from pathlib import Path
 
 import joblib
-import matplotlib
-
-# Headless-safe backend chosen before pyplot import: the pipeline and tests
-# run on servers/CI without a display, and Agg renders PNGs just as well.
-matplotlib.use("Agg")
-
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.cluster import KMeans
@@ -146,7 +139,17 @@ def plot_k_evaluation(evaluation: pd.DataFrame) -> None:
     the k choice, not just quote it — the left panel is the elbow (inertia
     dropping fast until the bend, slowly after), the right panel is the
     silhouette score, and the reader sees where k=4 sits on both curves.
+
+    matplotlib is imported here rather than at module scope so the serving
+    path (api/main.py imports this module) never pays for a GUI/plotting
+    stack — matplotlib alone adds ~150 MB to the process, which matters on
+    free-tier instances.
     """
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
     fig, (ax_elbow, ax_sil) = plt.subplots(1, 2, figsize=(11, 4.2))
 
     ax_elbow.plot(evaluation["k"], evaluation["inertia"], "o-", color="#2a6f97")

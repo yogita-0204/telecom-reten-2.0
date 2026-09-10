@@ -24,3 +24,9 @@ services:
         value: "3.13"
       - key: PIP_NO_CACHE_DIR
         value: "1"
+      # Cap glibc malloc arenas: the free tier has one small container, and
+      # unbounded arenas are a classic source of needless RSS growth in
+      # Python/NumPy processes. 2 arenas trade a sliver of speed for a
+      # meaningful memory cushion.
+      - key: MALLOC_ARENA_MAX
+        value: "2"

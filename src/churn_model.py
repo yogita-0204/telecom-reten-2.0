@@ -38,16 +38,8 @@ from __future__ import annotations
 from pathlib import Path
 
 import joblib
-import matplotlib
-
-# Headless-safe backend chosen before pyplot import: the pipeline and tests
-# run on servers/CI without a display, and Agg renders PNGs just as well.
-matplotlib.use("Agg")
-
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import shap
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
@@ -304,7 +296,17 @@ def plot_confusion_matrix(
     misses (false negatives, the silent losses); and of the customers it
     flags, how many were false alarms (wasted save offers). The tidy CSV lets
     the dashboard re-render it, the PNG documents it in the README.
+
+    matplotlib is imported here rather than at module scope so the serving
+    path (api/main.py imports this module) never pays for a GUI/plotting
+    stack — matplotlib alone adds ~150 MB to the process, which matters on
+    free-tier instances.
     """
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
     y_pred = model.predict(X_test)
     cm = confusion_matrix(y_test, y_pred)
 
@@ -365,7 +367,17 @@ def generate_shap_summary(
     statistically stable at that size, and it keeps peak SHAP memory ~4x
     lower — important on free-tier instances where the pipeline regenerates
     artifacts on first launch (Render/Streamlit bootstrap).
+
+    shap (and matplotlib) are imported here, not at module scope, so the
+    serving path never loads the explainability stack — SHAP brings its own
+    dependency tree and tens of MB into the process.
     """
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    import shap
+
     # Deterministic sample of the held-out set for the SHAP computation
     # (explained in the docstring; seed matches the repo-wide seed 42 rule).
     rng = np.random.default_rng(42)
